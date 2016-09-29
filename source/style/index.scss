@@ -6,6 +6,9 @@ html,body{
   margin: 0 auto;
   background-size: cover;
   background-image: url("../img/photoshop/bg1200.jpg");
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 .autorization{
   padding: 1.5em;
@@ -20,6 +23,40 @@ html,body{
     &:hover,&:focus{
       background-color: #083c96;
       border-color: #083c96;
+    }
+  }
+}
+.copyright{
+  font: 1em/6.25em r_light;
+  color: #fff;
+}
+.mainContainer{
+  width: 100%;
+  &__block{
+    margin: 0 auto;
+    padding: 0 0.625em;
+    &_info{
+      padding: 2.5em;
+      background-color: rgba(#1c1f29,0.5);
+    }
+    &_links{
+      display: flex;
+      justify-content: space-between;
+      &_link{
+        color:#fff;
+        flex-grow: 1;
+        text-align: center;
+        font: 1em/3em r_medium;
+        text-decoration: none;
+        background-color: rgba(#004cd1,0.85);
+        &:not(:first-child):not(:last-child){
+          border-right: 1px solid rgba(#dee3e7,0.5);
+          border-left: 1px solid rgba(#dee3e7,0.5);
+        }
+        &:hover{
+          background-color: #043ea3;
+        }
+      }
     }
   }
 }

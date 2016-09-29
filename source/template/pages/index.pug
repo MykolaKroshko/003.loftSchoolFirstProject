@@ -1,29 +1,18 @@
-doctype html
-html
-  head
-    meta(charset="utf-8")
-    title Home
-    meta(content="width=device-width, initial-scale=1" name="viewport")
-    meta(content="ie=edge" http-equiv="x-ua-compatible")
+extends ../common/_head
+block vars
+  - var title = 'Home page'
+block body
+  .indexContainer
+    .autorization
+      button.autorization__button(type="button") Авторизуватися
+    .mainContainer
+      .col-4.mainContainer__block
+        .mainContainer__block_info.
+        .mainContainer__block_links
+          a.mainContainer__block_links_link(href="#") Мої роботи
+          a.mainContainer__block_links_link(href="/about.html") Про мене
+          a.mainContainer__block_links_link(href="#") Блог
 
-    //- favicon block start
-    //- favicon block end
 
-    link(rel='stylesheet' href='/assets/css/foundation.css')
-    link(rel='stylesheet' href='/assets/css/app.css')
-    script(src='/assets/js/foundation.js' defer)
-    script(src='/assets/js/app.js' defer)
-
-    <!--[if lt IE 9]>
-    script(src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js")
-    <![endif]-->
-
-  body
-    .indexContainer
-      .row.autorization
-        button.col-2.autorization__button(type="button") Авторизуватись
-      .row.main
-        .cols.col-4
-        .cols.col-4
-
-        .cols.col-4
+    .copyright
+      include ../common/_copyright
