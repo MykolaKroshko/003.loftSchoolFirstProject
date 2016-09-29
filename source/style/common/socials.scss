@@ -1,0 +1,14 @@
+.socials{
+  width: 9em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  &__link{
+    outline: none;
+    opacity: 0.85;
+    &:hover path,&:focus path{
+      fill:#004cd1;
+      opacity: 1;
+    }
+  }
+}

@@ -1,7 +1,29 @@
-extends ../_template
+doctype html
+html
+  head
+    meta(charset="utf-8")
+    title Home
+    meta(content="width=device-width, initial-scale=1" name="viewport")
+    meta(content="ie=edge" http-equiv="x-ua-compatible")
 
-block variables
-  - var title = 'Home page'
+    //- favicon block start
+    //- favicon block end
 
-block content
-  .content content
+    link(rel='stylesheet' href='/assets/css/foundation.css')
+    link(rel='stylesheet' href='/assets/css/app.css')
+    script(src='/assets/js/foundation.js' defer)
+    script(src='/assets/js/app.js' defer)
+
+    <!--[if lt IE 9]>
+    script(src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js")
+    <![endif]-->
+
+  body
+    .indexContainer
+      .row.autorization
+        button.col-2.autorization__button(type="button") Авторизуватись
+      .row.main
+        .cols.col-4
+        .cols.col-4
+
+        .cols.col-4
