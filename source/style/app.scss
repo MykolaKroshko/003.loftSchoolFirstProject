@@ -3,8 +3,20 @@
   src: url(../fonts/roboto/Roboto-Light.ttf);
 }
 @font-face {
+  font-family: r_regular;
+  src: url(../fonts/roboto/Roboto-Regular.ttf);
+}
+@font-face {
   font-family: r_medium;
   src: url(../fonts/roboto/Roboto-Medium.ttf);
+}
+@font-face {
+  font-family: r_bold;
+  src: url(../fonts/roboto/Roboto-Bold.ttf);
+}
+@font-face {
+  font-family: web_regular;
+  src: url(../fonts/Sansus-Webissimo-Regular.ttf);
 }
 *{
   box-sizing:border-box;
