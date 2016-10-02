@@ -1,0 +1,114 @@
+extends ../_template
+
+block vars
+  - var title = 'My Works'
+  - var fillLeft = 'rgba(13,17,32,0.85)'
+  - var fillRight = 'rgba(13,17,32,0.85)'
+
+block content
+  .row.titleContainer.myWorksContainer
+    .title.title__slider.col-4 Мої роботи
+  .slider.row
+    .cols.col-6.slider__description
+      .slider__description_wide
+        ul.slider__description_list.row
+          li.slider__description_item
+            .slider__description_container
+              h2.slider__description_name сайт школи онлайн освіти
+              hr.slider__description_separator
+              .slider__description_technologies html, css, javascript
+              a.slider__description_link(href="#") 
+                include ../../icons/link.svg
+                span Переглянути сайт
+          li.slider__description_item
+            .slider__description_container
+              h2.slider__description_name сайт школи онлайн освіти
+              hr.slider__description_separator
+              .slider__description_technologies html, css, javascript
+              a.slider__description_link(href="#") 
+                include ../../icons/link.svg
+                span Переглянути сайт
+          li.slider__description_item
+            .slider__description_container
+              h2.slider__description_name сайт школи онлайн освіти
+              hr.slider__description_separator
+              .slider__description_technologies html, css, javascript
+              a.slider__description_link(href="#") 
+                include ../../icons/link.svg
+                span Переглянути сайт
+          li.slider__description_item
+            .slider__description_container
+              h2.slider__description_name сайт школи онлайн освіти
+              hr.slider__description_separator
+              .slider__description_technologies html, css, javascript
+              a.slider__description_link(href="#") 
+                include ../../icons/link.svg
+                span Переглянути сайт
+    .cols.col-6.slider__img
+      .slider__img_current
+        .slider__img_wide
+          ul.row.slider__list
+            li.slider__item
+              img.slider__image(src="assets/img/work-1.png" alt="work 1")
+            li.slider__item
+              img.slider__image(src="assets/img/work-2.png" alt="work 2")
+            li.slider__item
+              img.slider__image(src="assets/img/work-3.png" alt="work 3")
+            li.slider__item
+              img.slider__image(src="assets/img/work-4.png" alt="work 4")
+      .slider__img_siblings.row
+        .slider__img_down.col-6.cols
+          .slider__img_wide
+            ul.row.slider__list
+              li.slider__item
+                img.slider__image(src="assets/img/work-1.png" alt="work 1")
+              li.slider__item
+                img.slider__image(src="assets/img/work-2.png" alt="work 2")
+              li.slider__item
+                img.slider__image(src="assets/img/work-3.png" alt="work 3")
+              li.slider__item
+                img.slider__image(src="assets/img/work-4.png" alt="work 4")
+          include ../../icons/portf_arrow_down.svg
+        .slider__img_up.col-6.cols
+          .slider__img_wide
+            ul.row.slider__list
+              li.slider__item
+                img.slider__image(src="assets/img/work-1.png" alt="work 1")
+              li.slider__item
+                img.slider__image(src="assets/img/work-2.png" alt="work 2")
+              li.slider__item
+                img.slider__image(src="assets/img/work-3.png" alt="work 3")
+              li.slider__item
+                img.slider__image(src="assets/img/work-4.png" alt="work 4")
+          include ../../icons/portf_arrow_up.svg
+
+
+
+  .aboutTalkes  
+    .row.titleContainer.talkesContainer
+      .title.title__about.col-4 Що про мене говорять
+    .row.talkes.col-8
+      .cols.col-6.talkes__talk
+        .talkes__talk_image.talkes__talk_image_koval
+        .talkes__talk_words Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!
+        .talkes__talk_author.
+          <span>Ковальчук Дмитрий</span> — основатель Loftschool
+      .cols.col-6.talkes__talk
+        .talkes__talk_image.talkes__talk_image_zar
+        .talkes__talk_words Этот код выдержет любые испытания. Только пожалуйста, не загружается сайт на слишком старых браузерах!
+        .talkes__talk_author.
+          <span>Зар Захаров</span> — преподаватель
+    .callback
+      form.callback__form.col-4
+        .callback__form_container
+          .callback__form_title Зв'язатись зі мною
+          hr.callback__form_hr
+          input.callback__form_input.callback__form_login(type="text" placeholder="Ваше ім'я")
+          input.callback__form_input.callback__form_email(type="email" placeholder="Ваш email")
+          textarea.callback__form_input.callback__form_textArea(placeholder="Ваше повідомлення")
+        .callback__form_buttons.row
+          button.cols.col-6.callback__form_button.callback__form_submit(type="button") Відправити
+          button.cols.col-6.callback__form_button.callback__form_clear(type="reset") Очистити
+    .toTop
+      button.toTop__button(type="button")
+        include ../../icons/arrow_down.svg

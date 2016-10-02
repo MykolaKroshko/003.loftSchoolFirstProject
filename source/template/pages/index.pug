@@ -7,7 +7,7 @@ block body
         button.autorization__buttonHolder_button(type="button") Авторизуватися
     .mainContainer.col-4
       .mainContainer__wideWrapper.row
-        .mainContainer__block
+        .mainContainer__block.front
           .mainContainer__block_info
             .mainContainer__block_info_imageHolder
               img.mainContainer__block_info_imageHolder_image(src="assets/img/fav_night.png",alt="Author's photo")
@@ -17,24 +17,23 @@ block body
             .mainContainer__block_info_socials
               include ../common/_socials
           nav.mainContainer__block_links
-            a.mainContainer__block_links_link(href="#") Мої роботи
+            a.mainContainer__block_links_link(href="/projects.html") Мої роботи
             a.mainContainer__block_links_link(href="/about.html") Про мене
-            a.mainContainer__block_links_link(href="#") Блог
-        .mainContainer__block
+            a.mainContainer__block_links_link(href="/blog.html") Блог
+        .mainContainer__block.back
           .mainContainer__block_info
             h2.mainContainer__block_info_formTitle Авторизуйтеся
             form.mainContainer__block_info_form(action="#")
               .mainContainer__block_info_form_formItem
                 label.mainContainer__block_info_form_loginLabel
+                  input.mainContainer__block_info_form_textInput(type="text" placeholder="Логін")
                   span.mainContainer__block_info_form_image.mainContainer__block_info_form_login
                     include ../../icons/login.svg
-                  input.mainContainer__block_info_form_textInput(type="text" placeholder="Логін")
               .mainContainer__block_info_form_formItem
                 label.mainContainer__block_info_form_image_passwordLabel
-                  span.mainContainer__block_info_form_image
-                    include ../../icons/password.svg
-                  .mainContainer__block_info_form_image_password
                   input.mainContainer__block_info_form_textInput(type="text" placeholder="Пароль")
+                  span.mainContainer__block_info_form_image.mainContainer__block_info_form_image_password
+                    include ../../icons/password.svg
               .mainContainer__block_info_form_formItem_last
                 label.mainContainer__block_info_form_checkboxLabel
                   input.mainContainer__block_info_form_checkbox(type="checkbox")

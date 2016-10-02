@@ -1,9 +1,12 @@
 .footer{
   color:#fff;
+  margin-top: -11.5em;
+  position: absolute;
+  width: 100%;
   &__infoContainer{
     background-color:  rgba(#1c1f29,0.85);
     font: 1em/1.625em r_light;
-    padding: 1.875em 0;
+    padding: 1.39em 0;
     display: flex;
     &_info{
       text-align: left;
@@ -42,7 +45,7 @@
     }
   }
   &__copyrightContainer{
-    padding: 0.75em;
+    padding: 0.6125em;
     background-color: rgba(#083c96,0.85);
   }
 }

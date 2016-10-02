@@ -1,9 +1,21 @@
 header.header.row
-  img.header__image_stars(src='assets/img/photoshop/bg1200.jpg')
-  .header__socials.header__icons
-    include _socials
-  button.header__icons.header__icons_menuButton(type='button').cols.col-1
-    include ../../icons/hamburger.svg
-  .header__photo
+  .header__buttons.row
+    .header__socials.header__icons.cols.col-2
+      include _socials
+    .header__menuButton.cols.col-1
+      button.header__menuButton_openMenu.header__icons(type='button')
+        include ../../icons/hamburger.svg
+  .header__photo.col-6
     .header__photo_image
-    include ../../icons/stars1.svg
+      img.header__photo_pic(src="assets/img/fav_night.png")
+    h2.header_name Крошко Микола
+    span.header_description Особистий сайт веб розробника
+  .header__down
+    button.header__down_button
+      include ../../icons/arrow_down.svg
+    .header__threeangle.header__threeangle_left
+      svg(xmlns="http://www.w3.org/2000/svg" version="1.1" class="svg-triangle" viewBox="0 0 200 100" preserveAspectRatio="none")
+        polygon(points="0,0 200,100 0,100" fill=fillLeft) 
+    .header__threeangle.header__threeangle_right
+      svg(xmlns="http://www.w3.org/2000/svg" version="1.1" class="svg-triangle" viewBox="0 0 200 100" preserveAspectRatio="none")
+        polygon(points="0,100 200,0 200,100" fill=fillRight)

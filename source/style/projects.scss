@@ -1,0 +1,254 @@
+.myWorksContainer{
+  background-color: #0d1120;
+}
+.slider{
+  height: 752px;
+  &__description{
+    background-color: #f2f0e8;
+    height: 100%;
+    overflow: hidden;
+    &_list{
+      margin: 0;
+      padding: 0;
+      list-style-type: none;
+      height: 100%;
+    }
+    &_wide{
+      width: 400%;
+      height: 100%;
+    }
+    &_item{
+      width: 25%;
+      float: left;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+    }
+    &_container{
+      width: 66.666666%;
+      margin: 0 auto;
+    }
+    &_name{
+      text-transform: uppercase;
+      color: #474b57;
+      font: 2.1875em/1.17 web_regular;
+      margin: 0;
+    }
+    &_separator{
+      width: 25%;
+      background-color: #474b57;
+      height: 3px;
+      border: none;
+      margin: 1.5em auto;
+    }
+    &_technologies{
+      font: 1em r_medium;
+      color: #083c96;
+      text-transform: uppercase;
+    }
+    &_link{
+      display: inline-block;
+      text-decoration: none;
+      color: #fff;
+      background-color: #004cd1;
+      width: 50%;
+      margin: 3.6825em auto 0;
+      font: 1em/2.8125 r_medium;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      &:hover{
+        background-color: #043ea3;
+      }
+      & svg{
+        margin: 0.75em;
+        margin-left: 0;
+      }
+    }
+  }
+  &__img{
+    height: 100%;
+    background-color: #e3e2de;
+    &_wide{
+      width: 400%;
+      height: 100%;
+    }
+    &_current{
+      height: 70%;
+    }
+    &_siblings{
+      height: 30%;
+    }
+    &_current, &_up, &_down{
+      overflow: hidden;
+    }
+    &_up, &_down{
+      height: 100%;
+      position: relative;
+      & svg{
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        margin: auto;
+        z-index: 1;
+        cursor: pointer;
+      }
+    }
+    &_up:after, &_down:after{
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background: rgba(#aaabb7, .7);
+      content: "";
+    }
+  }
+  &__description, &__img{
+    padding: 0;
+  }
+  &__item{
+    float:left;
+    width: 25%;
+    height: 100%;
+    padding: 2.5% 0;
+  }
+  &__list{
+    margin: 0;
+    height: 100%;
+    list-style-type: none;
+    padding: 0;
+  }
+  &__image{
+    max-width: 100%;
+    max-height: 100%;
+  }
+}
+.titleContainer{
+  opacity: .85;
+  .title{
+    padding: .9em 0;
+    margin: 0 auto;
+    text-align: center;
+    font: 3.9375em/1.05 web_regular;
+    color: #fff;
+    text-transform: uppercase;
+    &__slider{
+      background: url(../img/photoshop/stars2.png) no-repeat center;
+    }
+    &__about{
+      background: url(../img/photoshop/stars3.png) no-repeat center .73em;
+    }
+  }
+}
+.aboutTalkes{
+  background: url(../img/photoshop/mayak.png) no-repeat 38em 23em, url(../img/photoshop/mayak_bg.jpg) no-repeat center;
+  background-size: auto, cover;
+  padding-bottom: 11.5em;
+}
+.talkes{
+  margin: 0 auto;
+  padding-bottom: 4em;
+  &__talk{
+    font: 1em/1.625 r_reg_italic;
+    color: #fff;
+    &_image{
+      width: 5em;
+      height: 5em;
+      border-radius: 50%;
+      margin: 0 auto;
+      &_koval{
+        background: url(../img/photoshop/AboutKov.jpg) no-repeat 0 -10px;
+      }
+      &_zar{
+        background: url(../img/photoshop/AboutZar.jpg) no-repeat center;
+      }
+    }
+    &_words{
+      text-align: left;
+      padding: 1em 0;
+      background: url(../img/photoshop/quote.png) no-repeat top left;
+
+    }
+    &_author{
+      margin: 0 auto;
+      & span{
+        display: block;
+        font-family: r_bold_italic;
+      }
+    }
+  }
+}
+.callback{
+  &__form{
+    margin: 0 auto;
+    padding: 0 .625em;
+    &_container{
+      padding: 1.25em;
+    }
+    &_container, &_buttons{
+    background-color: rgba(#fff, .05);
+    }
+    &_title{
+      color: #fff;
+      font: 2.1875em/1.17 web_regular;
+      text-transform: uppercase;
+      text-align: center;
+      margin: .57em 0;
+    }
+    &_hr{
+      width: 25%;
+      margin: 0 auto 1.875em;
+    }
+    &_input{
+      width: 100%;
+      border: none;
+      background-color: rgba(#fff, .07);
+      padding: 0.6825em 1em;
+      outline: none;
+      color: #fff;
+      font: 1em/1.5 r_regular;
+      &::placeholder{
+        font: 1em/1.5 r_regular;
+        color: #fff;
+        opacity: .5;
+      }
+    }
+    &_login, &_email{
+      margin-bottom: 1.25em;
+    }
+    &_textArea{
+      height: 8.125em;
+      resize: none;
+    }
+    &_button{
+      background-color: rgba(#004cd1,0.85);
+      border: none;
+      font: 1em/2.8125 r_regular;
+      color: #fff;
+      opacity: .5;
+      outline: none;
+      cursor: pointer;
+      &:hover{
+        opacity: 1;
+        background-color: #043ea3;
+      }
+    }
+  }
+}
+.toTop{
+  margin: 4em 0;
+  &__button{
+    display: block;
+    margin: 0 auto;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    background: none;
+    transform: rotateX(180deg);
+  }
+}

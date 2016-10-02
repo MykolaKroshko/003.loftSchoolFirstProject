@@ -1,0 +1,41 @@
+&_image{
+  background: #f0efe9;
+  width: 2.8125em;
+  height: 2.8125em;
+  display: inline-block;
+  position: absolute;
+  top:0;
+  left: 0;
+  & svg{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+  }
+}
+&_textInput{
+  width: 100%;
+  height: 2.8125em;
+  padding: 0.625em 1.25em;
+  padding-left: 4.0625em;
+  border: none;
+  color: #373e42;
+  font: 1em/1.42 r_regular;
+  outline: none;
+  &::placeholder{
+    color: #373e42;
+    opacity: 0.5;
+  }
+  &:focus{
+    border: 1px solid #004cd1;
+  }
+}
+&_textInput:focus + &_image{
+  border-right: 1px solid #004cd1;
+  & path{
+    fill: #004cd1;
+  }
+}
+

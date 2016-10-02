@@ -1,0 +1,42 @@
+&_imageHolder{
+  width: 9em;
+  height: 9em;
+  border-radius: 50%;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+  &_image{
+    position: absolute;
+    top: -99999px;
+    bottom: -99999px;
+    left: -99999px;
+    right: -99999px;
+    margin: auto;
+  }
+}
+&_text{
+  margin-top: 0.625em;
+  & p{
+    margin: 0;
+  }
+  &_name{
+    font: 1.75em/1.5 r_medium;
+  }
+  &_aboutSite{
+    font: 1em/1.5 r_regular;
+  }
+}
+&_socials{
+  display: inline-block;
+  padding-top: 2em;
+  opacity: 0.7;
+  & .socials__link{
+    opacity: 0.7;
+    & path{
+      fill:#004cd1;
+    }
+    &:hover,&:focus{
+      opacity: 1;
+    }
+  }
+}

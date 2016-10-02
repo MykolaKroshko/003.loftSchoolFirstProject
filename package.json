@@ -22,7 +22,7 @@
     "gulp-svg-sprite": "^1.3.6",
     "gulp-svgmin": "^1.2.3",
     "gulp.spritesmith": "git+https://github.com/twolfson/gulp.spritesmith.git",
-    "mongoose":"^4.6.1",
+    "mongoose": "^4.6.1",
     "rimraf": "^2.5.4"
   },
   "dependencies": {
