@@ -53,13 +53,6 @@
     max-width: 60%;
     margin: 0.875em auto 0;
   }
-  &__separator{
-    width: 20%;
-    background-color: #566358;
-    height: 3px;
-    border: none;
-    margin: 1em auto .875em;
-  }
   &__text{
     text-align: left;
     color: #474b57;
@@ -73,10 +66,7 @@
   }
   &__sectionTitle{
     text-align: left;
-    color: #474b57;
-    margin: 0;
     margin-bottom: .5em;
-    font: 1.75em/1.14 r_medium;
   }
   &__text{
     margin: 2.25em 0 3em;
@@ -131,13 +121,6 @@
     font: 2.1875em/1.625 web_regular;
     text-transform: uppercase;
     margin: 0;
-  }
-  &__separator{
-    width: 90px;
-    height: 3px;
-    border: none;
-    background-color: #474b57;
-    margin: .95em auto;
   }
   &__holder{
     &_column{

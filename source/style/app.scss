@@ -80,8 +80,34 @@
 
 *{
   box-sizing:border-box;
+  font-family: r_regular;
 }
 
+hr{
+  width: 90px;
+  height: 3px;
+  border: none;
+  background-color: #474b57;
+  margin: 1em auto;
+}
+h3,h4{
+  font-family: web_regular;
+  margin: 0 auto;
+  text-transform: uppercase;
+}
+h3{
+  font-size: 3.9375em;
+  line-height: 1.05
+}
+h4{
+  font-size: 2.1875em;
+  line-height: 1.17;
+}
+h5{
+  font: 1.75em/1.14 r_medium;
+  margin: 0 auto;
+  color: #474b57;
+}
 .wrapper{
   width: 1200px;
   margin: 0 auto;

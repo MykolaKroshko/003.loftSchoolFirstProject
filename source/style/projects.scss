@@ -35,13 +35,6 @@
       font: 2.1875em/1.17 web_regular;
       margin: 0;
     }
-    &_separator{
-      width: 25%;
-      background-color: #474b57;
-      height: 3px;
-      border: none;
-      margin: 1.5em auto;
-    }
     &_technologies{
       font: 1em r_medium;
       color: #083c96;
@@ -201,8 +194,8 @@
       margin: .57em 0;
     }
     &_hr{
-      width: 25%;
       margin: 0 auto 1.875em;
+      background-color: rgba(#f2f0e8,.5);
     }
     &_input{
       width: 100%;

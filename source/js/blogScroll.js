@@ -6,9 +6,10 @@ $(document).ready(function(){
     showArticle($(this).attr("href"),true);
   })
 
-  $(window).scroll(function(){
-    checkArticle();
-  });
+});
+
+$(window).scroll(function(){
+  checkArticle();
 });
 
 function showArticle(article, isAnimated){

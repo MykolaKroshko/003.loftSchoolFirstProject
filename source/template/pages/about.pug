@@ -10,21 +10,21 @@ block content
     .about__info.cols.col-6
       .about__title
         include ../../icons/stars2.svg
-        span.about__title_text Про мене
+        h3.about__title_text Про мене
       .about__photo
         img.about__photo_image(src="assets/img/photoshop/devPhoto.jpg")
-      h3.about__subtitle Хто я
-      hr.about__separator
+      h4.about__subtitle Хто я
+      hr
       p.about__text Я веб розробник із Житомира, Україна. Мені 25 років. Я вивчаю розробку сучасних сайтів та додатків. Мені це подобається
       p.about__text Цей сайт я створив в рамказ навчання в Школі онлайн освіти LoftSchool. Незабаром я наповню його контентом. А поки насолоджуйтесь зовнішнім виглядом.
     .about__skills.cols.col-6
       .about__skills_container
-        h3.about__subtitle Чим я можу бути Вам корисним
-        hr.about__separator
+        h4.about__subtitle Чим я можу бути Вам корисним
+        hr
         p.about__text.skills__text Найбільше мене приваблює Frontend розробка, хоча я також здатем вирішувати нескладні задачі щодо Backend. Проте давайте по черзі.
         .skills
           section.skills__section.skills__frontend
-            h3.skills__sectionTitle Frontend
+            h5.skills__sectionTitle Frontend
             .skills__set.row
               .skills__item.cols.col-3
                 img.skills__item_cyrcle(src="assets/img/photoshop/skill.png")
@@ -36,7 +36,7 @@ block content
                 img.skills__item_cyrcle(src="assets/img/photoshop/skill.png")
                 .skills__item_skillTitle JavaScript & jQuery
           section.skills__section.skills__backend
-            h3.skills__sectionTitle Backend
+            h5.skills__sectionTitle Backend
             .skills__set.row
               .skills__item.cols.col-3
                 img.skills__item_cyrcle(src="assets/img/photoshop/skill.png")
@@ -51,7 +51,7 @@ block content
                 img.skills__item_cyrcle(src="assets/img/photoshop/skill.png")
                 .skills__item_skillTitle Mongo.db
           section.skills__section.skills__workflow
-            h3.skills__sectionTitle WorkFlow
+            h5.skills__sectionTitle WorkFlow
             .skills__set.row
               .skills__item.cols.col-3
                 img.skills__item_cyrcle(src="assets/img/photoshop/skill.png")
@@ -66,8 +66,8 @@ block content
     #map
     .contacts.cols.col-6
       .contacts__container
-        h3.contacts__title контакти
-        hr.contacts__separator
+        h4.contacts__title контакти
+        hr
         .contacts__holder.row
           .contacts__holder_left.contacts__holder_column.col-6.cols
             .contacts__holder_contact.contacts__holder_contact_skype
@@ -84,4 +84,3 @@ block content
             .contacts__holder_contact
               include ../../icons/map_n.svg
               span.contacts_details Україна, м.Житомир, вул.Крошенська...
-
