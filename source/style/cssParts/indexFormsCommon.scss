@@ -1,26 +1,9 @@
 .mainContainer{
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  margin: auto;
   perspective: 1000px;
-  max-height: 405px;
-  &, .front, .back{
-  }
-  .front, .back {
-    backface-visibility: hidden;
-    position: absolute;
-    top: 0;
-    left: 0;
-  }
-  .front {
-    transform: rotateY(0deg);
-  }
-  .back {
-    transform: rotateY(180deg);
-  }
+  margin: 0 auto;
+  min-height: 405px;
+  width: 100%;
+  max-width: 380px;
   &__wideWrapper{
     display: flex;
     align-items: center;
@@ -28,7 +11,7 @@
     transform-style: preserve-3d;
     position: relative;
   }
-  .mainContainer.hover &__wideWrapper {
+  &:hover &__wideWrapper {
     transform: rotateY(180deg);
   }
   &__block{
@@ -41,10 +24,10 @@
       padding: 2em 0;
       background-color: rgba(#1c1f29,0.5);
       text-align: center;
-      @import "indexAboutBlock";
-      @import "indexFormBlock";
+ //     @import "indexAboutBlock";
+   //   @import "indexFormBlock";
     }
-    &_links{
+/*    &_links{
       display: flex;
       justify-content: space-between;
       background-color: rgba(#1c1f29,0.5);
@@ -65,6 +48,29 @@
           background-color: #043ea3;
         }
       }
-    }
+    }*/
   }
+}
+@media screen and (min-width: 768px) {
+  .mainContainer{
+    width: 50%;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .mainContainer{
+    width: 33%;
+  }
+}
+
+.front, .back {
+  backface-visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.front {
+  transform: rotateY(0deg);
+}
+.back {
+  transform: rotateY(180deg);
 }
