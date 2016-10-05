@@ -62,11 +62,13 @@
   text-align: center;
   &_span{
     font-family: r_light;
-    color: rgba($textOnDark, .14);
   }
 }
+.index__copyright .copyright_span{
+  color: rgba($textOnDark, .14);
+}
 @media screen and (min-width: 480px) {
-  .copyright{
+  .index__copyright .copyright{
     margin: 2.5rem 0;
     &_span{
       color: $textOnDark;

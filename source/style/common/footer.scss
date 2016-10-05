@@ -1,50 +1,56 @@
 .footer{
-  color:#fff;
-  margin-top: -11.5em;
-  position: absolute;
+  color:$textOnDark;
+  //margin-top: -11.5em;
+  //position: absolute;
   width: 100%;
-  &__infoContainer{
+  &__Container{
     background-color:  rgba(#1c1f29,0.85);
-    font: 1em/1.625em r_light;
-    padding: 1.39em 0;
-    display: flex;
-    &_info{
-      text-align: left;
-      padding: 0 2em;
-      flex-basis:0;
-      p{
-        margin: 0;
-      }
+    font-family: r_light;
+    padding: $smallIndent/2;
+    //display: flex;
+  }
+  &__info{
+    text-align: center;
+    //padding: 0 2em;
+    //flex-basis:0;
+    p{
+      margin: 0;
     }
-    &_description{
-      flex-grow: 4;
-    }
-    &_linkContainer{
-      border-right:1px solid rgba(#fff,0.2);
-      border-left:1px solid rgba(#fff,0.2);
-      display: flex;
-      flex-grow: 5;
-      flex-direction: column;
-      justify-content: space-between;
-      &_links{
-        display: flex;
-        justify-content: space-between;
-        &_link{
-          text-decoration: none;
-          color: #fff;
-          font-family: r_medium;
-          &:hover,&:focus{
-            color: #004cd1;
-            outline: none;
-          }
-        }
-      }
-    }
-    &_contacts{
-      flex-grow: 3;
+    &:not(:last-child){
+      border-bottom: 1px solid rgba($lightBorder, .2);
     }
   }
-  &__copyrightContainer{
+  &__description{
+    //flex-grow: 4;
+  }
+  &__linkContainer{
+    //border-right:1px solid rgba(#fff,0.2);
+    //border-left:1px solid rgba(#fff,0.2);
+    //display: flex;
+    //flex-grow: 5;
+    //flex-direction: column;
+    //justify-content: space-between;
+  }
+  &__links{
+    display: flex;
+    justify-content: space-between;
+    &_link{
+      text-decoration: none;
+      color: #fff;
+      font-family: r_medium;
+      &:hover,&:focus{
+        color: #004cd1;
+        outline: none;
+      }
+    }
+  }
+  &__socials .socials{
+    margin: 0 auto;
+  }
+  &__contacts{
+    //flex-grow: 3;
+  }
+  &__copyright{
     padding: 0.6125em;
     background-color: rgba(#083c96,0.85);
   }
