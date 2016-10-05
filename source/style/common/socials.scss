@@ -8,7 +8,7 @@
     outline: none;
     opacity: 0.85;
     &:hover path,&:focus path{
-      fill:#004cd1;
+      fill: $blueHover;
       opacity: 1;
     }
   }
