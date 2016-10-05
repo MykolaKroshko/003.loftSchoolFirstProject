@@ -1,6 +1,6 @@
 &_imageHolder{
-  width: 9em;
-  height: 9em;
+  width: 10rem;
+  height: 10rem;
   border-radius: 50%;
   margin: 0 auto;
   overflow: hidden;
@@ -14,21 +14,27 @@
     margin: auto;
   }
 }
+@media screen and (min-width: 480px) {
+  &_imageHolder{
+    width: 9rem;
+    height: 9rem;
+  }
+}
 &_text{
-  margin-top: 0.625em;
-  & p{
-    margin: 0;
+  margin-top: 1.325rem;
+}
+@media screen and (min-width: 480px) {
+  &_text{
+    margin-top: .625rem;
   }
-  &_name{
-    font: 1.75em/1.5 r_medium;
-  }
-  &_aboutSite{
-    font: 1em/1.5 r_regular;
-  }
+}
+&_aboutSite{
+  margin: 0;
+  margin-top: .357rem;
 }
 &_socials{
   display: inline-block;
-  padding-top: 2em;
+  padding-top: 2rem;
   opacity: 0.7;
   & .socials__link{
     opacity: 0.7;

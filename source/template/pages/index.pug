@@ -6,50 +6,48 @@ include ../common/_head
   .mainContainer
     .mainContainer__wideWrapper.row
       .mainContainer__block.front
-        .mainContainer__block_info FRONT
+        .mainContainer__block_info
+          .mainContainer__block_info_imageHolder
+            img.mainContainer__block_info_imageHolder_image(src="assets/img/fav_night.png",alt="Author's photo")
+          .mainContainer__block_info_text
+            h5.mainContainer__block_info_name Крошко Микола
+            p.mainContainer__block_info_aboutSite Особистий сайт веб розробника
+          .mainContainer__block_info_socials
+            include ../common/_socials
+        nav.mainContainer__block_links
+          a.mainContainer__block_links_link(href="/projects.html") Мої роботи
+          a.mainContainer__block_links_link(href="/about.html") Про мене
+          a.mainContainer__block_links_link(href="/blog.html") Блог
       .mainContainer__block.back
-        .mainContainer__block_info BACK
-      //-     .mainContainer__block_info_imageHolder
-      //-       img.mainContainer__block_info_imageHolder_image(src="assets/img/fav_night.png",alt="Author's photo")
-      //-     .mainContainer__block_info_text
-      //-       p.mainContainer__block_info_text_name Крошко Микола
-      //-       p.mainContainer__block_info_text_aboutSite Особистий сайт веб розробника
-      //-     .mainContainer__block_info_socials
-      //-       include ../common/_socials
-      //-   nav.mainContainer__block_links
-      //-     a.mainContainer__block_links_link(href="/projects.html") Мої роботи
-      //-     a.mainContainer__block_links_link(href="/about.html") Про мене
-      //-     a.mainContainer__block_links_link(href="/blog.html") Блог
-
-
-      //-     h2.mainContainer__block_info_formTitle Авторизуйтеся
-      //-     form.mainContainer__block_info_form(action="#")
-      //-       .mainContainer__block_info_form_formItem
-      //-         label.mainContainer__block_info_form_loginLabel
-      //-           input.mainContainer__block_info_form_textInput(type="text" placeholder="Логін")
-      //-           span.mainContainer__block_info_form_image.mainContainer__block_info_form_login
-      //-             include ../../icons/login.svg
-      //-       .mainContainer__block_info_form_formItem
-      //-         label.mainContainer__block_info_form_image_passwordLabel
-      //-           input.mainContainer__block_info_form_textInput(type="text" placeholder="Пароль")
-      //-           span.mainContainer__block_info_form_image.mainContainer__block_info_form_image_password
-      //-             include ../../icons/password.svg
-      //-       .mainContainer__block_info_form_formItem_last
-      //-         label.mainContainer__block_info_form_checkboxLabel
-      //-           input.mainContainer__block_info_form_checkbox(type="checkbox")
-      //-           span.mainContainer__block_info_form_checkIcon
-      //-             include ../../icons/check.svg
-      //-           span.mainContainer__block_info_form_text Я людина
-      //-         span.mainContainer__block_info_form_question Ви точно не робот?
-      //-         label.mainContainer__block_info_form_radioLabel
-      //-           input.mainContainer__block_info_form_radio(type="radio" name="robot" value="yes")
-      //-           span.mainContainer__block_info_form_radioIcon
-      //-           span.mainContainer__block_info_form_text Так
-      //-         label.mainContainer__block_info_form_radioLabel
-      //-           input.mainContainer__block_info_form_radio(type="radio" name="robot" value="no")
-      //-           span.mainContainer__block_info_form_radioIcon
-      //-           span.mainContainer__block_info_form_text Не впевнений
-      //-   nav.mainContainer__block_links
-      //-     button.mainContainer__block_links_link.mainContainer__block_links_home.col-6(type="button") На головну
-      //-     button.mainContainer__block_links_link.mainContainer__block_links_enter.col-6(type="button") Увійти
+        .mainContainer__block_info
+          h4.mainContainer__block_info_formTitle Авторизуйтеся
+          form.mainContainer__block_info_form(action="#")
+            .mainContainer__block_info_form_formItem
+              label.mainContainer__block_info_form_loginLabel
+                input.mainContainer__block_info_form_textInput(type="text" placeholder="Логін")
+                span.mainContainer__block_info_form_image.mainContainer__block_info_form_login
+                  include ../../icons/login.svg
+            .mainContainer__block_info_form_formItem
+              label.mainContainer__block_info_form_image_passwordLabel
+                input.mainContainer__block_info_form_textInput(type="text" placeholder="Пароль")
+                span.mainContainer__block_info_form_image.mainContainer__block_info_form_image_password
+                  include ../../icons/password.svg
+            .mainContainer__block_info_form_formItem_last
+              label.mainContainer__block_info_form_checkboxLabel
+                input.mainContainer__block_info_form_checkbox(type="checkbox")
+                span.mainContainer__block_info_form_checkIcon
+                  include ../../icons/check.svg
+                span.mainContainer__block_info_form_text Я людина
+              span.mainContainer__block_info_form_question Ви точно не робот?
+              label.mainContainer__block_info_form_radioLabel
+                input.mainContainer__block_info_form_radio(type="radio" name="robot" value="yes")
+                span.mainContainer__block_info_form_radioIcon
+                span.mainContainer__block_info_form_text Так
+              label.mainContainer__block_info_form_radioLabel
+                input.mainContainer__block_info_form_radio(type="radio" name="robot" value="no")
+                span.mainContainer__block_info_form_radioIcon
+                span.mainContainer__block_info_form_text Не впевнений
+        nav.mainContainer__block_links
+          button.mainContainer__block_links_link.mainContainer__block_links_home.col-6(type="button") На головну
+          button.mainContainer__block_links_link.mainContainer__block_links_enter.col-6(type="button") Увійти
   include ../common/_copyright

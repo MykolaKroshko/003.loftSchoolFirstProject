@@ -1,15 +1,17 @@
 &_formTitle{
-  text-transform: uppercase;
-  font: 2.1875em/1.17 web_regular;
-  font-weight: normal;
-  margin: 0;
-  margin-bottom: 1em;
+  margin-bottom: 2.125rem;
 }
+@media screen and (min-width: 480px) {
+  &_formTitle{
+    margin-bottom: 2rem;
+  }
+}
+
 &_form{
-  padding: 0 1.3125em;
+  padding: 0 $smallIndent;
   &_formItem{
     position: relative;
-    margin-bottom: 1.25em;
+    margin-bottom: $smallIndent;
   }
   &_checkbox,&_radio{
     display: none;
@@ -20,14 +22,22 @@
 
   &_text{
     opacity: 0.8;
-    font: 1em/1.25 r_medium;
+    font: 1.14rem/1.5 r_medium;
     vertical-align: top;
   }
   &_question{
     display: inline-block;
     opacity: 0.8;
-    font: 1em/1.5 r_bold;
+    font: 1.14rem/1.5 r_bold;
     width: 100%;
-    margin-bottom: .5em;
+    margin-bottom: .5rem;
+  }
+  @media screen and (min-width: 480px) {
+    &_text{
+      font-size: 1rem;
+    }
+    &_question{
+      font-size: 1rem;
+    }
   }
 }

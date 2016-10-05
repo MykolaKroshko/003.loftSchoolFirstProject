@@ -3,6 +3,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  line-height: 1;
   &__link{
     outline: none;
     opacity: 0.85;
@@ -10,5 +11,10 @@
       fill:#004cd1;
       opacity: 1;
     }
+  }
+}
+@media screen and (min-width: 480px) {
+  .socials{
+    line-height: inherit;
   }
 }

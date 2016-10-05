@@ -1,6 +1,3 @@
-html, body{
-  min-height: 100%;
-}
 .indexContainer{
   display: flex;
   min-height: 100vh;
@@ -8,12 +5,12 @@ html, body{
   background-image: url("../img/photoshop/bg1200.jpg"); 
   flex-direction: column;
   justify-content: space-between;
-  padding: .714rem;
+  padding: $smallIndent/2;
   padding-bottom: 0;
 }
 @media screen and (min-width: 480px) {
   .indexContainer{
-    padding: 1.25rem;
+    padding: $smallIndent;
     padding-bottom: 0;
   }
 }
@@ -26,10 +23,11 @@ html, body{
 
 .autorization{
   text-align: center;
-  margin-bottom: 2rem;
+  margin-bottom: 0;
+  height: 2.86rem;
   &__button{
     width: 10.72rem;
-    line-height: 28px;
+    line-height: 2;
     background: transparent;
     border: 1px solid $lightBorder;
     color: $textOnDark;
@@ -51,9 +49,11 @@ html, body{
 @media screen and (min-width: 480px) {
   .autorization{
     text-align: right;
+    height: 2.8125rem;
+    margin-bottom: 2rem;
     &__button{
       width: 11.25rem;
-      line-height: 23px;
+      line-height: 1.4375;
       padding: .625rem;
     }
   }

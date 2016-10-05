@@ -27,24 +27,42 @@ button{
 //   background-color: #474b57;
 //   margin: 1em auto;
 // }
-// h3,h4{
-//   font-family: web_regular;
-//   margin: 0 auto;
-//   text-transform: uppercase;
-// }
+h3,h4{
+  font-weight: normal;
+  font-family: web_regular;
+  margin: 0 auto;
+  text-transform: uppercase;
+}
 // h3{
 //   font-size: 3.9375em;
 //   line-height: 1.05
 // }
-// h4{
-//   font-size: 2.1875em;
-//   line-height: 1.17;
-// }
-// h5{
-//   font: 1.75em/1.14 r_medium;
-//   margin: 0 auto;
-//   color: #474b57;
-// }
+h4{
+  font-size: 2.14rem;
+  line-height: 1.4;
+}
+@media screen and (min-width: 480px) {
+  h4{
+    font-size: 1.875rem;
+  }
+}
+@media screen and (min-width: 769px) {
+  h4{
+    font-size: 2.1875em;
+    line-height: 1.17;
+  }
+}
+h5{
+  font: 1.5rem/1.3333333 r_medium;
+  margin: 0 auto;
+}
+@media screen and (min-width: 480px) {
+  h5 {
+    font-size: 1.75rem;
+    line-height: 1.21;
+  }
+}
+
 .wrapper{
   width: 1200px;
   margin: 0 auto;

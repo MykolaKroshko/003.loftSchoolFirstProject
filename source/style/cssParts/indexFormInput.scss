@@ -1,9 +1,9 @@
 &_image{
   background: #f0efe9;
-  width: 2.8125em;
-  height: 2.8125em;
-  display: inline-block;
+  width: $indexTextInputsSize;
+  height: $indexTextInputsSize;
   position: absolute;
+  border: 1px solid transparent;
   top:0;
   left: 0;
   & svg{
@@ -17,25 +17,29 @@
 }
 &_textInput{
   width: 100%;
-  height: 2.8125em;
-  padding: 0.625em 1.25em;
-  padding-left: 4.0625em;
+  height: $indexTextInputsSize;
+  padding: $smallIndent/2 $smallIndent;
+  padding-left: $indexTextInputsSize + $smallIndent;
   border: none;
-  color: #373e42;
-  font: 1em/1.42 r_regular;
+  color: $indexInputsTextColor;
   outline: none;
   &::placeholder{
-    color: #373e42;
-    opacity: 0.5;
+    color: rgba($indexInputsTextColor, .5);
+  }
+  &:hover{
+    border: 1px solid $indexInputsTextColor;
   }
   &:focus{
-    border: 1px solid #004cd1;
+    border: 1px solid $blue;
   }
 }
+&_textInput:hover + &_image{
+  border-right: 1px solid rgba($indexInputsTextColor, .75);
+}
 &_textInput:focus + &_image{
-  border-right: 1px solid #004cd1;
+  border-right: 1px solid $blue;
   & path{
-    fill: #004cd1;
+    fill: $blue;
   }
 }
 
