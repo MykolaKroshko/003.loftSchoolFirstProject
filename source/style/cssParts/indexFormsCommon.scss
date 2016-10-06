@@ -25,7 +25,7 @@
       @import "indexAboutBlock";
       @import "indexFormBlock";
     }
-    @media screen and (min-width: 480px) {
+    @media screen and (min-width: 769px) {
       &_info{
         padding: 2.5rem 0 2rem;
       }
@@ -39,7 +39,8 @@
         color:#fff;
         flex-grow: 1;
         text-align: center;
-        font: 1.14rem/2.75 r_medium;
+        font-family:  r_medium;
+        line-height: $indexButtomsHeight;
         text-decoration: none;
         background-color: rgba($blue,0.85);
         outline: none;
@@ -57,11 +58,6 @@
         }
         &:active{
           background-color: #0235a2;
-        }
-      }
-      @media screen and (min-width: 480px) {
-        &_link{
-          font-size: 1rem;
         }
       }
     }

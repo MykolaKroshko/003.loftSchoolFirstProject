@@ -1,5 +1,5 @@
 .socials{
-  width: 9em;
+  width: 10rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -8,13 +8,22 @@
     outline: none;
     opacity: 0.85;
     &:hover path,&:focus path{
-      fill: $blueHover;
       opacity: 1;
+    }
+    &:focus path{
+      fill: $blue;
+    }
+    &:hover path{
+      fill: $blueHover;
     }
   }
 }
 @media screen and (min-width: 480px) {
   .socials{
     line-height: inherit;
+  }
+}@media screen and (min-width: 769px) {
+  .socials{
+    width: 8.75rem;
   }
 }

@@ -14,16 +14,14 @@
     margin: auto;
   }
 }
-@media screen and (min-width: 480px) {
+&_text{
+  margin-top: 1.325rem;
+}
+@media screen and (min-width: 769px) {
   &_imageHolder{
     width: 9rem;
     height: 9rem;
   }
-}
-&_text{
-  margin-top: 1.325rem;
-}
-@media screen and (min-width: 480px) {
   &_text{
     margin-top: .625rem;
   }
