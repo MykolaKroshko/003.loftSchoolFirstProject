@@ -15,7 +15,7 @@ $(window).scroll(function(){
 function showArticle(article, isAnimated){
   var
     reqArticle = $(".blog__article").filter('[data-article="'+article.replace(/#/,"")+'"]');
-    position = reqArticle.offset().top-50;
+    position = reqArticle.offset().top-49;
     console.log(reqArticle, position);
   if (isAnimated){
     $('body, html').animate({scrollTop: position}, 500);

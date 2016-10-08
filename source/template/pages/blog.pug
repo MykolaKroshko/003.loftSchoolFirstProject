@@ -2,12 +2,18 @@ extends ../_template
 
 block vars
   - var title = 'Blog'
-  - var fillLeft = '#fbf8f1'
-  - var fillRight = '#fbf8f1'
 
 block content
+
   section.blog.row
-    nav.nav.cols.col-3
+    .threeangle.threeangle_left
+      svg(xmlns="http://www.w3.org/2000/svg" version="1.1" class="svg-triangle" viewBox="0 0 200 100" preserveAspectRatio="none")
+        polygon(points="0,0 200,100 0,100" fill="#fbf8f1") 
+    .threeangle.threeangle_right
+      svg(xmlns="http://www.w3.org/2000/svg" version="1.1" class="svg-triangle" viewBox="0 0 200 100" preserveAspectRatio="none")
+        polygon(points="0,100 200,0 200,100" fill="#fbf8f1")
+    input#showNav.showNav__Checkbox(type='checkbox')
+    nav.nav
       ul.nav__list
         li.nav__list_item
           a.nav__list_link(href="#article1") Найважливіше в SASS
@@ -17,24 +23,25 @@ block content
           a.nav__list_link(href="#article3") Найнеобхідніший набір Gulp плагінів
         li.nav__list_item
           a.nav__list_link(href="#article4") Чому я обрав Pug
-    main.blog__container.cols.col-7
+      label.showNav__switcher(for="showNav")
+    main.blog__container
       article.blog__article(data-article="article1")
-        h2.blog__article_title Найважливіше в SASS
-        h6.blog__article_createTime 01.10.2016
+        h5.blog__article_title Найважливіше в SASS
+        time.blog__article_createTime 01.10.2016
         .blog__article_text 
           p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui dicta minus molestiae vel beatae natus eveniet ratione temporibus aperiam harum alias officiis assumenda officia quibusdam deleniti eos cupiditate dolore doloribus!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui dicta minus molestiae vel beatae natus eveniet ratione temporibus aperiam harum alias officiis assumenda officia quibusdam deleniti eos cupiditate dolore doloribus!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui dicta minus molestiae vel beatae natus eveniet ratione temporibus aperiam harum alias officiis assumenda officia quibusdam deleniti eos cupiditate dolore doloribus!Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
           p Qui dicta minus molestiae vel beatae natus eveniet ratione temporibus aperiam harum alias officiis assumenda officia quibusdam deleniti eos cupiditate dolore doloribus!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui dicta minus molestiae vel beatae natus eveniet ratione temporibus aperiam harum alias officiis assumenda officia quibusdam deleniti eos cupiditate dolore doloribus!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui dicta minus molestiae vel beatae natus eveniet ratione temporibus aperiam harum alias officiis assumenda officia quibusdam deleniti eos cupiditate dolore doloribus!
       article.blog__article(data-article="article2")
-        h2.blog__article_title Прийоми верстки без котрих не обходиться жоден сайт
-        h6.blog__article_createTime 01.10.2016
+        h5.blog__article_title Прийоми верстки без котрих не обходиться жоден сайт
+        time.blog__article_createTime 01.10.2016
         .blog__article_text 
           p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui dicta minus molestiae vel beatae natus eveniet ratione temporibus aperiam harum alias officiis assumenda officia quibusdam deleniti eos cupiditate dolore doloribus!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui dicta minus molestiae vel beatae natus eveniet ratione temporibus aperiam harum alias officiis assumenda officia quibusdam deleniti eos cupiditate dolore doloribus!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui dicta minus molestiae vel beatae natus eveniet ratione temporibus aperiam harum alias officiis assumenda officia quibusdam deleniti eos cupiditate dolore doloribus!Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
           p Qui dicta minus molestiae vel beatae natus eveniet ratione temporibus aperiam harum alias officiis assumenda officia quibusdam deleniti eos cupiditate dolore doloribus!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui dicta minus molestiae vel beatae natus eveniet ratione temporibus aperiam harum alias officiis assumenda officia quibusdam deleniti eos cupiditate dolore doloribus!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui dicta minus molestiae vel beatae natus eveniet ratione temporibus aperiam harum alias officiis assumenda officia quibusdam deleniti eos cupiditate dolore doloribus!
       article.blog__article(data-article="article3")
-        h2.blog__article_title Найнеобхідніший набір Gulp плагінів
-        h6.blog__article_createTime 01.10.2016
+        h5.blog__article_title Найнеобхідніший набір Gulp плагінів
+        time.blog__article_createTime 01.10.2016
         .blog__article_text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui dicta minus molestiae vel beatae natus eveniet ratione temporibus aperiam harum alias officiis assumenda officia quibusdam deleniti eos cupiditate dolore doloribus!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui dicta minus molestiae vel beatae natus eveniet ratione temporibus aperiam harum alias officiis assumenda officia quibusdam deleniti eos cupiditate dolore doloribus!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui dicta minus molestiae vel beatae natus eveniet ratione temporibus aperiam harum alias officiis assumenda officia quibusdam deleniti eos cupiditate dolore doloribus!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui dicta minus molestiae vel beatae natus eveniet ratione temporibus aperiam harum alias officiis assumenda officia quibusdam deleniti eos cupiditate dolore doloribus!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui dicta minus molestiae vel beatae natus eveniet ratione temporibus aperiam harum alias officiis assumenda officia quibusdam deleniti eos cupiditate dolore doloribus!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui dicta minus molestiae vel beatae natus eveniet ratione temporibus aperiam harum alias officiis assumenda officia quibusdam deleniti eos cupiditate dolore doloribus!
       article.blog__article(data-article="article4")
-        h2.blog__article_title Чому я обрав Pug
-        h6.blog__article_createTime 01.10.2016
+        h5.blog__article_title Чому я обрав Pug
+        time.blog__article_createTime 01.10.2016
         .blog__article_text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui dicta minus molestiae vel beatae natus eveniet ratione temporibus aperiam harum alias officiis assumenda officia quibusdam deleniti eos cupiditate dolore doloribus!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui dicta minus molestiae vel beatae natus eveniet ratione temporibus aperiam harum alias officiis assumenda officia quibusdam deleniti eos cupiditate dolore doloribus!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui dicta minus molestiae vel beatae natus eveniet ratione temporibus aperiam harum alias officiis assumenda officia quibusdam deleniti eos cupiditate dolore doloribus!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui dicta minus molestiae vel beatae natus eveniet ratione temporibus aperiam harum alias officiis assumenda officia quibusdam deleniti eos cupiditate dolore doloribus!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui dicta minus molestiae vel beatae natus eveniet ratione temporibus aperiam harum alias officiis assumenda officia quibusdam deleniti eos cupiditate dolore doloribus!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui dicta minus molestiae vel beatae natus eveniet ratione temporibus aperiam harum alias officiis assumenda officia quibusdam deleniti eos cupiditate dolore doloribus!

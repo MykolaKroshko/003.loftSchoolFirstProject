@@ -1,74 +1,217 @@
+.threeangle{
+  width: 50%;
+  height: 30px;
+  float: left;
+  position: absolute;
+  bottom: 100%;
+  line-height: 0;
+  &_left{
+    left: 0;
+  }
+  &_right{
+    right: 0;
+  }
+  & svg{
+    width: 100%;
+    height: 100%;
+  }
+}
 .blog{
-  background-color: #fbf8f1;
+  //padding-top: 2.5em;
+  //margin-bottom: 11.5em;
+  background-color: #faf8f0;
   position: relative;
-  padding-top: 2.5em;
-  margin-bottom: 11.5em;
   &__container{
     text-align: left;
-  }
-  &__container,.nav{
-    margin-right: 8.333333333333333%;
+    padding: $smallIndent/2;
   }
   &__article{
-    padding-bottom: 4em;
-    &:not(:first-of-type){
-      margin-top: 4em;
-    }
+    padding: $smallIndent*1.5 0;
     &:not(:last-of-type){
-      border-bottom: 5px solid rgba(#373e42, .07);
-
+      border-bottom: 4px solid rgba(#373e42, .07);
     }
     &_title{
       color: #455a64;
-      font: 2.1875em / 1.17 web_regular;
-      margin: 0;
+      font-family: web_regular;
     }
     &_createTime{
       color: #083c96;
       opacity: .7;
-      font: 1em/3.5 r_regular;
-      margin: 0;
+      line-height: 3.86;
     }
     &_text{
       color: #455a64;
-      font: 1em/1.625 r_regular;
       & p{
-        margin: 0 0 .625em 0;
-        font: 1em/1.625 r_regular;
+        line-height: 1.5;
+        margin: 0;
+        margin-bottom:.75rem;
       }
     }
   }
 }
+.showNav{
+  &__Checkbox{
+    display: none;
+    & + .nav{
+      left:-20rem;
+    }  &:checked + .nav{
+      left:0;
+    }
+  }
+  &__switcher{
+    display: block;
+    width: $smallIndent;
+    height: $smallIndent*2;
+    background-color: #253468;
+    position: absolute;
+    border-top-right-radius: 50%;
+    border-bottom-right-radius: 50%;
+    left: 100%;
+    top: 50vh;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+  }
+}
 .nav{
+  transition-duration: 400ms;
+  position: absolute;
+  z-index: 1;
+  background-color: #253468;
+  height: 100%;
+  width: 20rem;
+  padding: $smallIndent;
   &__list{
     list-style-type: none;
     text-align: right;
-    padding-left: 2.5em;
     margin: 0;
+    padding: 0;
     &_link{
       text-decoration: none;
-      font: 1em/1.625 r_regular;
-      color: #566358;
+      color: rgba($textOnDark, .7);
     }
     &_item{
-      padding: .84em 0;
+      padding: 1rem 0;
+      font-size: 1.14rem;
+      line-height: 1.625;
       display: block;
       position: relative;
-      &.active:after{
-        display: block;
-        position: absolute;
-        top: 0;
-        right: -1.25em;
-        width: 3px;
-        height: 100%;
-        background-color: #083c96;
-        content: "";
-        border-radius: 2px;
-      }
     }
     &_item.active &_link{
-      color: #083c96;
+      color: $textOnDark;
       font-family: r_bold;
+    }
+  }
+}
+@media screen and (min-width: 480px) {
+  .threeangle{
+    height: 50px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .threeangle{
+    height: 70px;
+  }
+  .blog{
+    &__article{
+      &:not(:last-of-type){
+        border-bottom-width: 5px;
+      }
+      &_title{
+        font-size: 1.875rem;
+        line-height: 1.2;
+      }
+      &_createTime{
+        line-height: 3;
+      }
+      &_text{
+        & p{
+          line-height: 1.625;
+          margin-bottom:.625rem;
+        }
+      }
+    }
+  }
+  .nav__list_item{
+    font-size: 1rem;
+  }  
+}
+
+@media screen and (min-width: 1024px) {
+  .threeangle{
+    height: 100px;
+  }
+  .blog{
+    padding-top: 70px;
+    &__container{
+      float: left;
+      width: 78%;
+      max-width: calc(100% - 320px);
+      padding: 0 8.333333333333333%;
+    }
+    &__article{
+      padding: $smallIndent*1.5 0;
+    &_title{
+      font-size: 2.1875rem;
+      line-height: 1.17;
+    }
+    &_createTime{
+        line-height: 3.86;
+      }
+    }
+  }
+  .showNav{
+    &__Checkbox + .nav{
+      left:0;
+    }
+    &__switcher{
+      display: none;
+    }
+  }
+  .nav{
+    position: relative;
+    float: left;
+    background-color: #faf8f0;
+    width: 22%;
+    min-width: 20rem;
+    &__list{
+      width: 22%;
+      min-width: 20rem;
+      top: 0;
+      left: 0;
+      height: 100vh;
+      padding: $smallIndent;
+      &_link{
+        color: #455a64;
+      }
+      &_item{
+        font-size: 1rem;
+        line-height: 1.625;
+        padding: .85rem 0;
+        &.active:after{
+          display: block;
+          position: absolute;
+          top: 0;
+          right: -1.25em;
+          width: 3px;
+          height: 100%;
+          background-color: #083c96;
+          content: "";
+          border-radius: 2px;
+        }
+      }
+      &_item.active &_link{
+        color: #083c96;
+      }
+    }
+  }
+}
+@media screen and (min-width: 1440px) {
+  .threeangle{
+    height: 150px;
+  }
+  .blog{
+    &__container{
+      max-width: calc(55rem + (8.333333333333333% * 2));
     }
   }
 }
