@@ -1,9 +1,9 @@
 .about{
   position: relative;
-  display: flex;
   &__info{
     background-color: #f2f0e8;
-    padding: 0 5em;
+    width: 100%;
+    padding: 0;
     & circle{
       fill: #1056d1;
     }
@@ -13,68 +13,70 @@
     & svg{
       opacity: .1;
       transform: rotate(190deg);
-    }
-  }
-  &__skills{
-    background-color: #f4f5f0;
-    padding-left: 2.5em;
-    &_container{
-      margin-top: -1.25em;
+      width: 100%;
+      height: 100%;
     }
   }
   &__title{
     position: relative;
-    margin-top: -1.25em;
+    height: 6.5rem;
     &_text{
       position: absolute;
-      display: block;
-      top: .45em;
-      width: 100%;
-      text-transform: uppercase;
       color: #373e42;
-      font: 3.9375em/1.05 web_regular
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: auto;
+      height: calc(2.14rem * 1.4);
     }
   }
   &__photo{
     width: 100%;
-    height: 390px;
     overflow: hidden;
-    margin-top: .5em;
     &_image{
-      max-height: 100%;
+      width: 150%;
       transform: rotateY(180deg);
       float:right;
     }
   }
+  &__textHolder{
+    padding: $smallIndent 0 $smallIndent/2;
+  }
   &__subtitle{
     color: #474b57;
-    font: 2.1875em/1.17 web_regular;
     text-transform: uppercase;
     max-width: 60%;
-    margin: 0.875em auto 0;
+    font-family: web_regular;
   }
   &__text{
     text-align: left;
     color: #474b57;
-    font: 1em/1.5 r_regular;
-    margin: .625em 0;
+    margin: $smallIndent/2;
+  }
+  &__skills{
+    background-color: #f4f5f0;
+    width: 100%;
+    padding: 0;
+    &_container{
+      padding-top: $smallIndent;
+    }
   }
 }
 .skills{
-  &__section{
-    margin-bottom: 2em;
-  }
   &__sectionTitle{
-    text-align: left;
-    margin-bottom: .5em;
+    text-align: center;
+    margin-bottom: 1rem;
+    color: #474b57;
   }
-  &__text{
-    margin: 2.25em 0 3em;
+  &__set{
+    text-align: center;
   }
-
   &__item{
-    padding: 0;
+    display: inline-block;
+    line-height: 0;
     position: relative;
+    margin: 0 1rem 2rem; 
     &_skillTitle{
       color: #243994;
       font: 0.8125em/1.14 r_medium;
@@ -94,48 +96,32 @@
   }
 }
 .mapContainer{
-  height: 975px;
   position: relative;
-  & iframe{
-    width: 100%;
-    height: 100%;
-    border: none;
-  }
 }
 #map{
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
 }
 .contacts{
-  position: absolute;
-  top: 275px;
-  left: 25%;
-  padding: 0 .625em;
   &__container{
-    background-color: rgba(#fff,.7);
-    padding: 1.25em;
-    padding-bottom: .625em;
+    text-align: center;
+    background-color: #fcfcfc;
+    padding: $smallIndent $smallIndent/2;
   }
   &__title{
     color: #474b57;
-    font: 2.1875em/1.625 web_regular;
-    text-transform: uppercase;
-    margin: 0;
   }
   &__holder{
-    &_column{
-      padding: 0;
-    }
+    padding-top: $smallIndent/2;
     &_contact{
       display: flex;
       align-items: center;
-      margin: 1em 0 1.85em;
-      height: 2.8125em;
+        padding-bottom: $smallIndent/2;
       & svg{
-        width: 2.8125em;
-        height: 2.8125em;
-        margin-right:.625em;
-        display: block;
+        width: 2.5rem;
+        height: 2.5rem;
+        margin-right:.75rem;
+        display: inline-block;
       }
       & path, & circle{
         fill: #004cd1;
@@ -143,7 +129,156 @@
     }
   }
   &_details{
-    width: calc(100% - 3.4375em);
     text-align: left;
+    color: #474b57;
+    width: calc(100% - 3.25rem);
+  }
+}
+@media screen and (min-width: 480px) {
+  .about{
+    &__photo{
+      width: 66.666666%;
+      margin: 0 auto;
+    }
+    &__textHolder{
+      width: 66.666666%;
+      margin: 0 auto;
+    }
+  }
+}
+@media screen and (min-width: 668px) {
+  .contacts{ 
+    &__container{
+      padding: $smallIndent;
+    }
+  }
+  #map{
+    height: calc(100vh + 234px);
+    padding-bottom: $footerMiddleHeight;
+    margin-bottom: -$footerMiddleHeight;
+  }
+}
+@media screen and (min-width: 768px) {
+  .about{
+    &__title{
+      height: 8.375rem;
+    }
+    &__text{
+      margin: $smallIndent/2 0;
+    }
+    &__textHolder{
+      padding: $smallIndent*2 0;
+    }
+    &__skills_container{
+      padding-top: 0;
+    }
+  }
+  .contacts{
+    position: absolute;
+    width: 50%;
+    top: calc(50% - (234px / 2));
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    &__container{
+      background-color: rgba(#fff,.7);
+      padding: $smallIndent*2 $smallIndent 0;
+    }
+    &__holder{
+      &_contact{
+        padding-bottom: $smallIndent;
+        & svg{
+          width: 2.8125rem;
+          height: 2.8125rem;
+        }
+      }
+    }
+    &_details{
+      width: calc(100% - 3.5625rem);
+    }
+
+  }
+}
+@media screen and (min-width: 1024px) {
+  .about{
+    display: flex;
+    &__info{
+      width: 50%;
+    }
+    &__photo{
+      width: 80%;
+    }
+    &__textHolder{
+      width: 80%;
+    }
+    &__skills{
+      width: 50%;
+      padding-left: $smallIndent*2;
+      padding-right: $smallIndent/2;
+    }
+  }
+  .skills{
+    &__textHolder{
+      width: 100%;
+    }
+    &__text{
+     
+    }
+  }
+  #map{
+    height: calc(100vh + 200px);
+    padding-bottom: $footerWideHeight;
+    margin-bottom: -$footerWideHeight;
+  }
+  .contacts{
+    top: calc(50% - (200px / 2));
+  }
+}
+@media screen and (min-width: 1200px) {
+  .skills{
+    &__sectionTitle{
+      text-align: left;
+    }
+    &__set{
+      text-align: left;
+    }
+    &__item{
+      display: block;
+      float: left;
+      margin: 0;
+      margin-bottom: $smallIndent;
+      &:not(:last-child){
+        margin-right: 2rem; 
+      }
+      &_skillTitle{
+        text-align: center;
+      }
+    }
+  }
+  .contacts{
+    max-width: 36rem;
+    &__holder_column{
+      width: 50%;
+      float: left;
+
+    }
+  }
+}
+@media screen and (min-width: 1800px) {
+  .about{
+    &__title{
+      margin-top: -$smallIndent*1.5;
+    }
+    &__column{
+      width: 50%;
+      float: left;
+      padding: $smallIndent;
+    }
+    &__photo{
+      width: 100%;
+    }
+    &__textHolder{
+      width: 100%;
+    }
   }
 }

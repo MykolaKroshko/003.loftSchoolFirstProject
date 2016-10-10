@@ -30,9 +30,19 @@
       border: none;
       cursor: pointer;
       padding: 0;
+      opacity: .85;
       & svg{
         width: 100%;
         height: 100%;
+      }
+      &:hover,&:focus{
+        opacity: 1;
+      }
+      &:focus path{
+        fill: $blue;
+      }
+      &:hover path{
+        fill: $blueHover;
       }
     }
   }
