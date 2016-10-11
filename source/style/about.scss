@@ -216,6 +216,9 @@
       padding-left: $smallIndent*2;
       padding-right: $smallIndent/2;
     }
+    & .threeangle_right polygon{
+      fill: #f4f5f0;
+    }
   }
   .skills{
     &__textHolder{

@@ -1,53 +1,115 @@
 .myWorksContainer{
   background-color: #0d1120;
+  position: relative;
+  & .threeangle polygon{
+    fill: #0d1120;
+  }
+}
+.titleContainer{
+  opacity: .85;
+  .title{
+    padding: $smallIndent 0;
+    text-align: center;
+    color: #fff;
+    @media screen and (min-width: 768px) {
+      padding: 2.65rem 0;
+    }
+    @media screen and (min-width: 1200px) {
+      padding: 4.15rem 0;
+    }
+    &__slider{
+      background: url(../img/photoshop/stars2.png) no-repeat center;
+      background-size: contain;
+    }
+    &__about{
+      background: url(../img/photoshop/stars3.png) no-repeat center;
+      background-size: contain;
+    }
+  }
 }
 .slider{
-  height: 752px;
-  &__description{
-    background-color: #f2f0e8;
+  height: 100vh;
+  min-height: 568px;
+  position: relative;
+  &__list{
     height: 100%;
+    position: relative;
     overflow: hidden;
-    &_list{
-      margin: 0;
-      padding: 0;
-      list-style-type: none;
-      height: 100%;
-    }
-    &_wide{
-      width: 400%;
-      height: 100%;
-    }
-    &_item{
-      width: 25%;
-      float: left;
-      height: 100%;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-around;
-    }
+  }
+  &__item{
+    position: absolute;
+    padding: 8%;
+    height: 100%;
+    width: 100%;
+    text-align: center;
     &_container{
-      width: 66.666666%;
-      margin: 0 auto;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    &_current{
+      left:100%;
+    }
+    &_description{
+      opacity: 0;
+      z-index: 0;
+    }
+    &_down{
+      bottom:100%;
+    }
+    &_up{
+      top:100%;
+    }
+    &.active{
+      top: 0;
+      left: 0;
+      z-index: 1;
+      opacity: 1;
+    }
+  }
+  &__current{
+    height: 45%;
+    background-color: #e3e2de;
+    @media screen and (min-width: 1024px) {
+      &{
+        position: absolute;
+        right: 0;
+        height: 70%;
+        width: 50%;
+        top: 0;
+      }
+    }
+  }
+  &__description{
+    height: 39%;
+    background-color: #f2f0e8;
+    @media screen and (min-width: 1024px) {
+      &{
+        position: absolute;
+        left: 0;
+        height: 100%;
+        width: 50%;
+        top: 0;
+      }
     }
     &_name{
-      text-transform: uppercase;
       color: #474b57;
-      font: 2.1875em/1.17 web_regular;
-      margin: 0;
+      text-transform: uppercase;
+      font-family: web_regular;
     }
     &_technologies{
-      font: 1em r_medium;
-      color: #083c96;
       text-transform: uppercase;
+      color: #243994;
+      font-family: r_medium;
     }
     &_link{
       display: inline-block;
       text-decoration: none;
       color: #fff;
       background-color: #004cd1;
-      width: 50%;
-      margin: 3.6825em auto 0;
-      font: 1em/2.8125 r_medium;
+      width: 70%;
+      margin: $smallIndent auto;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -60,26 +122,28 @@
         margin-left: 0;
       }
     }
+
+  }
+  &__siblings{
+    height: 16%;
+    @media screen and (min-width: 1024px) {
+      &{
+        position: absolute;
+        right: 0;
+        height: 30%;
+        width: 50%;
+        bottom: 0;
+      }
+    }
   }
   &__img{
     height: 100%;
-    background-color: #e3e2de;
-    &_wide{
-      width: 400%;
-      height: 100%;
-    }
-    &_current{
-      height: 70%;
-    }
-    &_siblings{
-      height: 30%;
-    }
-    &_current, &_up, &_down{
-      overflow: hidden;
-    }
+    width: 50%;
+    float: left;
     &_up, &_down{
       height: 100%;
       position: relative;
+      background: linear-gradient(to right, #b9b9b9 0%,#f8f8f8 20%,#f8f8f8 80%,#b5b5b5 100%);
       & svg{
         position: absolute;
         top: 0;
@@ -87,7 +151,7 @@
         bottom: 0;
         left: 0;
         margin: auto;
-        z-index: 1;
+        z-index: 3;
         cursor: pointer;
       }
     }
@@ -96,79 +160,93 @@
       width: 100%;
       position: absolute;
       top: 0;
+      z-index: 2;
       left: 0;
       background: rgba(#aaabb7, .7);
       content: "";
     }
-  }
-  &__description, &__img{
-    padding: 0;
-  }
-  &__item{
-    float:left;
-    width: 25%;
-    height: 100%;
-    padding: 2.5% 0;
-  }
-  &__list{
-    margin: 0;
-    height: 100%;
-    list-style-type: none;
-    padding: 0;
   }
   &__image{
     max-width: 100%;
     max-height: 100%;
   }
 }
-.titleContainer{
-  opacity: .85;
-  .title{
-    padding: .9em 0;
-    margin: 0 auto;
-    text-align: center;
-    font: 3.9375em/1.05 web_regular;
-    color: #fff;
-    text-transform: uppercase;
-    &__slider{
-      background: url(../img/photoshop/stars2.png) no-repeat center;
-    }
-    &__about{
-      background: url(../img/photoshop/stars3.png) no-repeat center .73em;
-    }
-  }
-}
 .aboutTalkes{
   background: url(../img/photoshop/mayak.png) no-repeat 38em 23em, url(../img/photoshop/mayak_bg.jpg) no-repeat center;
   background-size: auto, cover;
-  padding-bottom: 11.5em;
+  padding-bottom: 353px;
+  margin-bottom: -353px;
 }
+@media screen and (min-width: 400px) {
+  .aboutTalkes{
+    padding-bottom: 329px;
+    margin-bottom: -329px;
+  }
+}
+@media screen and (min-width: 525px) {
+  .aboutTalkes{
+    padding-bottom: 310px;
+    margin-bottom: -310px;
+  }
+}
+@media screen and (min-width: 668px) {
+  .aboutTalkes{
+    padding-bottom: 234px;
+    margin-bottom: -234px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .aboutTalkes{
+    padding-bottom: 200px;
+    margin-bottom: -200px;
+  }
+}
+
 .talkes{
   margin: 0 auto;
-  padding-bottom: 4em;
+  padding: $smallIndent/2;
+  @media screen and (min-width: 1024px) {
+    &{
+      display: flex;
+      justify-content: center; 
+    }
+  }
   &__talk{
-    font: 1em/1.625 r_reg_italic;
+    font-family: r_reg_italic;
     color: #fff;
+    max-width: 25rem;
+    margin: 0 auto;
+    background: url(../img/photoshop/quote.png) no-repeat left 3rem ;
+    margin-bottom: $smallIndent*1.5;
+    @media screen and (min-width: 1024px) {
+      &{
+        width: 50%;
+        float: left;
+        margin: 0; 
+        margin-bottom: $smallIndent*1.5;
+      }
+    }
     &_image{
-      width: 5em;
-      height: 5em;
+      width: 3.714rem;
+      height: 3.714rem;
       border-radius: 50%;
       margin: 0 auto;
       &_koval{
         background: url(../img/photoshop/AboutKov.jpg) no-repeat 0 -10px;
+        background-size: cover;
       }
       &_zar{
         background: url(../img/photoshop/AboutZar.jpg) no-repeat center;
+        background-size: contain;
       }
     }
     &_words{
       text-align: left;
-      padding: 1em 0;
-      background: url(../img/photoshop/quote.png) no-repeat top left;
+      padding: $smallIndent/2 0;
 
     }
     &_author{
-      margin: 0 auto;
+      text-align: center;
       & span{
         display: block;
         font-family: r_bold_italic;
@@ -179,49 +257,51 @@
 .callback{
   &__form{
     margin: 0 auto;
-    padding: 0 .625em;
+    max-width: 25rem;
+    padding: 0 $smallIndent/2;
     &_container{
-      padding: 1.25em;
+      padding: $smallIndent;
     }
     &_container, &_buttons{
     background-color: rgba(#fff, .05);
     }
     &_title{
       color: #fff;
-      font: 2.1875em/1.17 web_regular;
+      font-family: web_regular;
       text-transform: uppercase;
       text-align: center;
-      margin: .57em 0;
+      margin: $smallIndent/2 0;
     }
     &_hr{
-      margin: 0 auto 1.875em;
-      background-color: rgba(#f2f0e8,.5);
+      margin-bottom: $smallIndent;
+      background-color: #fff;
     }
     &_input{
       width: 100%;
       border: none;
       background-color: rgba(#fff, .07);
-      padding: 0.6825em 1em;
+      padding: 0.6825rem 1rem;
       outline: none;
       color: #fff;
-      font: 1em/1.5 r_regular;
       &::placeholder{
-        font: 1em/1.5 r_regular;
         color: #fff;
         opacity: .5;
       }
+      &:focus::placeholder{
+        opacity: 0.75;
+      }
     }
     &_login, &_email{
-      margin-bottom: 1.25em;
+      margin-bottom: $smallIndent;
     }
     &_textArea{
-      height: 8.125em;
+      height: 10rem;
       resize: none;
     }
     &_button{
       background-color: rgba(#004cd1,0.85);
       border: none;
-      font: 1em/2.8125 r_regular;
+      font: 1rem/2.8125 r_regular;
       color: #fff;
       opacity: .5;
       outline: none;
@@ -234,7 +314,7 @@
   }
 }
 .toTop{
-  margin: 4em 0;
+  margin: 2.5rem 0;
   &__button{
     display: block;
     margin: 0 auto;
