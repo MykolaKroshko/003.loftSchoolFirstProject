@@ -75,6 +75,7 @@
   &__down{
     position: relative;
     margin-bottom: 50px;
+    z-index: 2;
     &_button{
       border: none;
       background: transparent;

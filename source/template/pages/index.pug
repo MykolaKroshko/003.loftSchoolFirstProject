@@ -18,7 +18,7 @@ include ../common/_head
           a.mainContainer__block_links_link(href="/projects.html") Мої роботи
           a.mainContainer__block_links_link(href="/about.html") Про мене
           a.mainContainer__block_links_link(href="/blog.html") Блог
-      .mainContainer__block.back
+      .mainContainer__block.back.form_contains
         .mainContainer__block_info
           h4.mainContainer__block_info_formTitle Авторизуйтеся
           form.mainContainer__block_info_form(action="#")
@@ -29,7 +29,7 @@ include ../common/_head
                   include ../../icons/login.svg
             .mainContainer__block_info_form_formItem
               label.mainContainer__block_info_form_image_passwordLabel
-                input.mainContainer__block_info_form_textInput(type="text" placeholder="Пароль")
+                input.mainContainer__block_info_form_textInput(type="password" placeholder="Пароль")
                 span.mainContainer__block_info_form_image.mainContainer__block_info_form_image_password
                   include ../../icons/password.svg
             .mainContainer__block_info_form_formItem_last
@@ -49,6 +49,9 @@ include ../common/_head
                 span.mainContainer__block_info_form_text Не впевнений
         nav.mainContainer__block_links
           button.mainContainer__block_links_link.mainContainer__block_links_home.col-6(type="button") На головну
-          button.mainContainer__block_links_link.mainContainer__block_links_enter.col-6(type="button") Увійти
+          button.mainContainer__block_links_link.submitForm.col-6(type="button") Увійти
   .index__copyright
     include ../common/_copyright
+  .indexPopUp
+    .popUpContent Роботам тут не место
+      img.closePopUp(src="assets/img/closePopUp.png" alt="close")

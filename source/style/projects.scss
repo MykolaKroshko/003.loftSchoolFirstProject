@@ -38,10 +38,15 @@
   }
   &__item{
     position: absolute;
-    padding: 8%;
+    padding: $smallIndent/2;
     height: 100%;
     width: 100%;
     text-align: center;
+    @media screen and (min-width: 1024px) {
+      &{
+        padding: $smallIndent;
+      }
+    }
     &_container{
       position: absolute;
       top: 50%;
@@ -104,18 +109,21 @@
       font-family: r_medium;
     }
     &_link{
-      display: inline-block;
       text-decoration: none;
       color: #fff;
-      background-color: #004cd1;
-      width: 70%;
+      background-color: $blue;
       margin: $smallIndent auto;
       display: flex;
       align-items: center;
       justify-content: center;
-
+      &:focus{
+        background-color: #1E60CF;
+      }
       &:hover{
-        background-color: #043ea3;
+        background-color: $blueHover;
+      }
+      &:active{
+        background-color: #0235a2;
       }
       & svg{
         margin: 0.75em;
@@ -172,7 +180,7 @@
   }
 }
 .aboutTalkes{
-  background: url(../img/photoshop/mayak.png) no-repeat 38em 23em, url(../img/photoshop/mayak_bg.jpg) no-repeat center;
+  background: url(../img/photoshop/mayak.png) no-repeat calc(50% + 30rem) 23rem, url(../img/photoshop/mayak_bg.jpg) no-repeat center;
   background-size: auto, cover;
   padding-bottom: 353px;
   margin-bottom: -353px;
@@ -299,16 +307,24 @@
       resize: none;
     }
     &_button{
-      background-color: rgba(#004cd1,0.85);
+      background-color: rgba($blue,0.85);
       border: none;
       font: 1rem/2.8125 r_regular;
       color: #fff;
       opacity: .5;
       outline: none;
       cursor: pointer;
+      &:focus{
+        background-color: #1E60CF;
+      }
       &:hover{
+        background-color: $blueHover;
+      }
+      &:active{
+        background-color: #0235a2;
+      }
+      &:hover,&:focus,&:active{
         opacity: 1;
-        background-color: #043ea3;
       }
     }
   }

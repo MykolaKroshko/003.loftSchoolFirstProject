@@ -15,8 +15,7 @@ $(window).scroll(function(){
 function showArticle(article, isAnimated){
   var
     reqArticle = $(".blog__article").filter('[data-article="'+article.replace(/#/,"")+'"]');
-    position = reqArticle.offset().top-49;
-    console.log(reqArticle, position);
+    position = reqArticle.offset().top-29;
   if (isAnimated){
     $('body, html').animate({scrollTop: position}, 500);
   } else {
@@ -29,7 +28,7 @@ function checkArticle(){
   $(".blog__article").each(function(){
     var
       that = $(this),
-      top = that.offset().top-50,
+      top = that.offset().top-30,
       bottom = top+that.height(),
       scroll = $(window).scrollTop();
     if(top < scroll && bottom > scroll){

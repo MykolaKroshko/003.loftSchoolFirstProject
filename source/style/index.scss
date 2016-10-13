@@ -7,6 +7,33 @@
   justify-content: space-between;
   padding: $smallIndent/2;
   padding-bottom: 0;
+  position: relative;
+}
+.indexPopUp{
+  position: absolute;
+  display: none;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(#373e42,.5);
+  top: 0;
+  left: 0;
+}
+.popUpContent{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  background-color: #fff;
+  padding: 2.5rem $smallIndent;
+  font-size: 2.5rem;
+  color: #373e42;
+}
+.closePopUp{
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  right: 0;
+  transform: translate(50%,-50%);
 }
 @media screen and (min-width: 480px) {
   .indexContainer{

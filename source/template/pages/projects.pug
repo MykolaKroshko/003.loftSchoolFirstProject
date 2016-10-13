@@ -33,7 +33,7 @@ block content
               span Переглянути сайт
         li.slider__item.slider__item_description
           .slider__item_container        
-            h5.slider__description_name сайт школи онлайн освіти
+            h5.slider__description_name демо сайт №2
             hr.slider__description_separator
             .slider__description_technologies html, css, javascript
             a.slider__description_link(href="#") 
@@ -41,7 +41,7 @@ block content
               span Переглянути сайт
         li.slider__item.slider__item_description
           .slider__item_container        
-            h5.slider__description_name сайт школи онлайн освіти
+            h5.slider__description_name демо сайт №3
             hr.slider__description_separator
             .slider__description_technologies html, css, javascript
             a.slider__description_link(href="#") 
@@ -49,7 +49,7 @@ block content
               span Переглянути сайт
         li.slider__item.slider__item_description
           .slider__item_container        
-            h5.slider__description_name сайт школи онлайн освіти
+            h5.slider__description_name демо сайт №4
             hr.slider__description_separator
             .slider__description_technologies html, css, javascript
             a.slider__description_link(href="#") 
@@ -58,20 +58,20 @@ block content
     .slider__siblings.row
       .slider__img.slider__img_down
         ul.slider__list
-          li.slider__item.slider__item_down.active
+          li.slider__item.slider__item_down
             img.slider__image(src="assets/img/work-1.png" alt="work 1")
           li.slider__item.slider__item_down
             img.slider__image(src="assets/img/work-2.png" alt="work 2")
           li.slider__item.slider__item_down
             img.slider__image(src="assets/img/work-3.png" alt="work 3")
-          li.slider__item.slider__item_down
+          li.slider__item.slider__item_down.active
             img.slider__image(src="assets/img/work-4.png" alt="work 4")
         include ../../icons/portf_arrow_down.svg
       .slider__img.slider__img_up
         ul.slider__list
-          li.slider__item.slider__item_up.active
-            img.slider__image(src="assets/img/work-1.png" alt="work 1")
           li.slider__item.slider__item_up
+            img.slider__image(src="assets/img/work-1.png" alt="work 1")
+          li.slider__item.slider__item_up.active
             img.slider__image(src="assets/img/work-2.png" alt="work 2")
           li.slider__item.slider__item_up
             img.slider__image(src="assets/img/work-3.png" alt="work 3")
@@ -92,7 +92,7 @@ block content
         .talkes__talk_words Этот код выдержет любые испытания. Только пожалуйста, не загружается сайт на слишком старых браузерах!
         .talkes__talk_author.
           <span>Зар Захаров</span> — преподаватель
-    .callback
+    .callback.form_contains
       form.callback__form
         .callback__form_container
           h5.callback__form_title Зв'язатись зі мною
@@ -101,7 +101,7 @@ block content
           input.callback__form_input.callback__form_email(type="email" placeholder="Ваш email")
           textarea.callback__form_input.callback__form_textArea(placeholder="Ваше повідомлення")
         .callback__form_buttons.row
-          button.cols.col-6.callback__form_button.callback__form_submit(type="button") Відправити
+          button.cols.col-6.callback__form_button.callback__form_submit.submitForm(type="button") Відправити
           button.cols.col-6.callback__form_button.callback__form_clear(type="reset") Очистити
     .toTop
       button.toTop__button(type="button")
