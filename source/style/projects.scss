@@ -53,15 +53,12 @@
       left: 50%;
       transform: translate(-50%, -50%);
     }
-    &_current{
-      left:100%;
-    }
-    &_description{
+    &_current, &_description{
       opacity: 0;
       z-index: 0;
     }
     &_down{
-      bottom:100%;
+      top:-100%;
     }
     &_up{
       top:100%;
@@ -71,7 +68,17 @@
       left: 0;
       z-index: 1;
       opacity: 1;
+      transition-duration: 700ms;
     }
+    &_down.wasActive{
+      top:100%;
+      transition-duration: 700ms;
+    }
+    &_up.wasActive{
+      top:-100%;
+      transition-duration: 700ms;
+    }
+
   }
   &__current{
     height: 45%;
@@ -148,19 +155,17 @@
     height: 100%;
     width: 50%;
     float: left;
+    cursor: pointer;
     &_up, &_down{
       height: 100%;
       position: relative;
       background: linear-gradient(to right, #b9b9b9 0%,#f8f8f8 20%,#f8f8f8 80%,#b5b5b5 100%);
       & svg{
         position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        margin: auto;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
         z-index: 3;
-        cursor: pointer;
       }
     }
     &_up:after, &_down:after{
@@ -172,6 +177,12 @@
       left: 0;
       background: rgba(#aaabb7, .7);
       content: "";
+    }
+    &_up:hover svg{
+      transform: translate(-50%,-100%);
+    }
+    &_down:hover svg{
+      transform: translate(-50%,0);
     }
   }
   &__image{

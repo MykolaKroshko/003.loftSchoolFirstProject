@@ -88,6 +88,5 @@ validation.init();
         return false;
       }
     }
-    console.log('formTrue');
   });
 })();

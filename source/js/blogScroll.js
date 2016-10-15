@@ -1,16 +1,15 @@
-$(document).ready(function(){
+$(function(){
   showArticle(window.location.hash, false);
-
-  $(".nav__list_link").on("click",function(e){
-    e.preventDefault();
-    showArticle($(this).attr("href"),true);
-  })
-
 });
 
-$(window).scroll(function(){
+$(window).on('scroll',function(){
   checkArticle();
 });
+
+$(".nav__list_link").on("click",function(e){
+  e.preventDefault();
+  showArticle($(this).attr("href"),true);
+})
 
 function showArticle(article, isAnimated){
   var

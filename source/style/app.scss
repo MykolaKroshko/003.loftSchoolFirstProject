@@ -16,6 +16,38 @@ html {
 *{
   box-sizing:border-box;
 }
+body{
+  position: relative;
+}
+.preload{
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 99999;
+  background: url(../img/preload/preloadBg.jpg) #18243E no-repeat center;
+  background-size: cover;
+  &__graphics{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    & svg{
+      stroke: #fff;
+      fill: #fff;
+    }
+  }
+  &__percent{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-family: 'ArialMT'; 
+    font-size: 24px;
+  }
+}
 
 button{
   font-family: r_medium;
