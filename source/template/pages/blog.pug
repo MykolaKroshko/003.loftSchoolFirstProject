@@ -14,16 +14,17 @@ block content
         polygon(points="0,100 200,0 200,100" fill="#fbf8f1")
     input#showNav.showNav__Checkbox(type='checkbox')
     nav.nav
-      ul.nav__list
-        li.nav__list_item
-          a.nav__list_link(href="#article1") Найважливіше в SASS
-        li.nav__list_item
-          a.nav__list_link(href="#article2") Прийоми верстки беp котрих не обходиться жоден сайт
-        li.nav__list_item
-          a.nav__list_link(href="#article3") Найнеобхідніший набір Gulp плагінів
-        li.nav__list_item
-          a.nav__list_link(href="#article4") Чому я обрав Pug
-      label.showNav__switcher(for="showNav")
+      .nav__container
+        ul.nav__list
+          li.nav__list_item
+            a.nav__list_link(href="#article1") Найважливіше в SASS
+          li.nav__list_item
+            a.nav__list_link(href="#article2") Прийоми верстки беp котрих не обходиться жоден сайт
+          li.nav__list_item
+            a.nav__list_link(href="#article3") Найнеобхідніший набір Gulp плагінів
+          li.nav__list_item
+            a.nav__list_link(href="#article4") Чому я обрав Pug
+        label.showNav__switcher(for="showNav")
     main.blog__container
       article.blog__article(data-article="article1")
         h5.blog__article_title Найважливіше в SASS

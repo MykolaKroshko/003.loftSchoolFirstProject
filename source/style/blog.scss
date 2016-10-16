@@ -67,7 +67,7 @@
     border-top-right-radius: 50%;
     border-bottom-right-radius: 50%;
     left: 100%;
-    top: 50vh;
+    top: 50%;
     transform: translate(-50%, -50%);
     cursor: pointer;
   }
@@ -75,11 +75,19 @@
 .nav{
   transition-duration: 400ms;
   position: absolute;
-  z-index: 1;
   background-color: #253468;
   height: 100%;
   width: 20rem;
-  padding: $smallIndent;
+  &__container{
+    padding: $smallIndent;
+    position: absolute;
+    &.sticky{
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 20rem;
+    }
+  }
   &__list{
     list-style-type: none;
     text-align: right;
@@ -111,6 +119,9 @@
   .blog{
     padding-bottom: $footerMiddleHeight;
     margin-bottom: -$footerMiddleHeight;
+  }
+  .nav{
+    height: calc(100% - 234px);
   }
 }
 @media screen and (min-width: 768px) {
@@ -150,6 +161,7 @@
     padding-bottom: $footerWideHeight;
     margin-bottom: -$footerWideHeight;
     padding-top: 70px;
+    display: flex;
     &__container{
       float: left;
       width: 78%;
@@ -181,13 +193,17 @@
     background-color: #faf8f0;
     width: 22%;
     min-width: 20rem;
+    height: inherit;
+    &__container{
+      padding: $smallIndent 0;
+      &.sticky{
+        width: 22%;
+        min-width: 20rem;
+      }
+    }
     &__list{
       width: 22%;
       min-width: 20rem;
-      top: 0;
-      left: 0;
-      height: 100vh;
-      padding: $smallIndent;
       &_link{
         color: #455a64;
       }
