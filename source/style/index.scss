@@ -1,8 +1,6 @@
 .indexContainer{
   display: flex;
   min-height: 100vh;
-  background-size: cover;
-  background-image: url("../img/photoshop/bg1200.jpg"); 
   flex-direction: column;
   justify-content: space-between;
   padding: $smallIndent/2;

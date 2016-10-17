@@ -1,6 +1,5 @@
 $(function(){
   showArticle(window.location.hash, false);
-  blogNav();
 });
 
 $(window).on('scroll',function(){
@@ -39,7 +38,7 @@ function checkArticle(){
     if(top < scroll && bottom > scroll){
       var
         currrentArticle = that.data("article"),
-      reqLink = $(".nav__list_link").filter('[href="#'+currrentArticle+'"]');
+        reqLink = $(".nav__list_link").filter('[href="#'+currrentArticle+'"]');
       reqLink.closest(".nav__list_item").addClass("active").siblings().removeClass("active");
       location.hash = currrentArticle;
     }
@@ -52,7 +51,6 @@ function blogNav(){
     container = $('nav.nav');
     containerCoord = container[0].getBoundingClientRect(),
     showNav = document.getElementById('showNav');
-  console.log('a=',navCoord,' b=',containerCoord);
   if (navCoord.top<=0){
     nav.addClass('sticky');
   }
@@ -79,13 +77,10 @@ $('#showNav').on('change',function(){
     container = $('nav.nav');
     containerCoord = container[0].getBoundingClientRect();
   if(document.documentElement.clientWidth<1024 && containerCoord.top<=0 && (containerCoord.bottom-navCoord.bottom)>0){
-    console.log('jsdfhg');
     if(this.checked){
       nav.addClass('sticky');
       nav.css('top','0');
-      console.log('true');
     }else{
-      console.log('false');
       nav.removeClass('sticky');
       nav.css('top',containerCoord.top*-1+'px');
     }

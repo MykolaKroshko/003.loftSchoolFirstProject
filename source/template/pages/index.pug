@@ -1,6 +1,10 @@
 - var title = 'Home page'
 include ../common/_head
 .indexContainer
+  .paralax
+    video.paralax__video(autoplay muted loop)
+      source(src="assets/img/video/night.mp4" type="video/mp4")
+    img.paralax__image(src="assets/img/mountains.png" alt="mountains")
   .autorization
     button.autorization__button(type="button") Авторизуватися
   .mainContainer
