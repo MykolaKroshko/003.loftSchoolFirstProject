@@ -31,8 +31,15 @@ app.post('/saveMail', jsonParse, function(req, res){
 	    var message = {status:"error", error:err}
 	    res.send(JSON.stringify(message));
 	}else{
-	    res.send('{"status":"sent"}')
-	}
+	    var items = [];
+	    Mail.find({}, function(err, item){
+		item.forEach(function(i){
+		    items.push(i);
+		});
+		var message = {status:'sent',DBcontent:items};
+		res.send(JSON.stringify(message));
+	    });
+	};
     });
 });
 

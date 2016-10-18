@@ -96,16 +96,20 @@ validation.init();
         mail: $form.find("[name='mail']").val(),
         message: $form.find("[name='message']").val()
       };
+      $form[0].reset();
       xhr.setRequestHeader('Content-type', 'application/json');
       xhr.send(JSON.stringify(data));
       xhr.onload = function(){
         var response = JSON.parse(xhr.responseText);
         if(response.status==='sent'){
-          alert('Повідомлення було надіслано успішно')
+          alert('Повідомлення було надіслано успішно');
+          for (var i=0;i<response.DBcontent.length;i++){
+            console.log(response.DBcontent[i]);
+          };
         }else if(response.status==='error'){
-          alert('Під час відправлення сталася помілка: '+response.error)
+          alert('Під час відправлення сталася помілка: '+response.error);
         }else{
-          alert('UNKNOWN ERROR!!!')
+          alert('UNKNOWN ERROR!!!');
         }
       }
     }
