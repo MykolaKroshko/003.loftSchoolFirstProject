@@ -42,7 +42,7 @@ var validation = (function(){
     el.qtip({
       content : {
         text : function(){
-          return "Поле має бути заповнене";
+          return "ÐŸÐ¾Ð»Ðµ Ð¼Ð°Ñ” Ð±ÑƒÑ‚Ð¸ Ð·Ð°Ð¿Ð¾Ð²Ð½ÐµÐ½Ðµ";
         }
       },
       show: {
@@ -101,9 +101,9 @@ validation.init();
       xhr.onload = function(){
         var response = JSON.parse(xhr.responseText);
         if(response.status==='sent'){
-          alert('�ов�домленн� ��п��но в�дп�авлено')
+          alert('Повідомлення було надіслано успішно')
         }else if(response.status==='error'){
-          alert('��д �а� в�дп�авленн� виникла помилка'+response.error)
+          alert('Під час відправлення сталася помілка: '+response.error)
         }else{
           alert('UNKNOWN ERROR!!!')
         }
