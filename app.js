@@ -23,20 +23,21 @@ app.use(express.static('./build'));
 //    res.send('Hello world!');
 //});
 
-app.post('/saveMail', function(req, res){
-    console.log('mail');
-    //var mail = new Mail(req.body);
-//    mail.save(function(err){
-//	if (err){
-//	    res.send('error'+err);
-//	}else{
-//	    res.send('mail sent')
-//	}
-//    });
+app.post('/saveMail', jsonParse, function(req, res){
+//    console.log(req.body);
+    var mail = new Mail(req.body);
+    mail.save(function(err){
+	if (err){
+	    var message = {status:"error", error:err}
+	    res.send(JSON.stringify(message));
+	}else{
+	    res.send('{"status":"sent"}')
+	}
+    });
 });
 
 // run server
 
-app.listen(5000, function(){
+app.listen(3000, function(){
     console.log('listen 5000');
 });

@@ -98,8 +98,16 @@ validation.init();
       };
       xhr.setRequestHeader('Content-type', 'application/json');
       xhr.send(JSON.stringify(data));
-      //console.log(JSON.stringify(data));
+      xhr.onload = function(){
+        var response = JSON.parse(xhr.responseText);
+        if(response.status==='sent'){
+          alert('�ов�домленн� ��п��но в�дп�авлено')
+        }else if(response.status==='error'){
+          alert('��д �а� в�дп�авленн� виникла помилка'+response.error)
+        }else{
+          alert('UNKNOWN ERROR!!!')
+        }
+      }
     }
-
   });
 })();
