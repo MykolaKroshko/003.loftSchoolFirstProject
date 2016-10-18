@@ -93,13 +93,13 @@ block content
         .talkes__talk_author.
           <span>Зар Захаров</span> — преподаватель
     .callback.form_contains
-      form.callback__form
+      form.callback__form#mail(action="/saveMail")
         .callback__form_container
           h5.callback__form_title Зв'язатись зі мною
           hr.callback__form_hr
-          input.callback__form_input.callback__form_login(type="text" placeholder="Ваше ім'я")
-          input.callback__form_input.callback__form_email(type="email" placeholder="Ваш email")
-          textarea.callback__form_input.callback__form_textArea(placeholder="Ваше повідомлення")
+          input.callback__form_input.callback__form_login(type="text" name="name" placeholder="Ваше ім'я")
+          input.callback__form_input.callback__form_email(type="email" name="mail" placeholder="Ваш email")
+          textarea.callback__form_input.callback__form_textArea(placeholder="Ваше повідомлення" name="message")
         .callback__form_buttons.row
           button.cols.col-6.callback__form_button.callback__form_submit.submitForm(type="button") Відправити
           button.cols.col-6.callback__form_button.callback__form_clear(type="reset") Очистити

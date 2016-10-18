@@ -4,12 +4,12 @@ var mongo = require('mongoose');
 
 var app = express();
 var jsonParse = parser.json();
-mongo.connect('mongodb://localhost/portfolioDB',{});
+mongo.connect('mongodb://localhost/portfolioDB');
 
 var Mail = mongo.model('Mail',{
     name: String,
     mail: String,
-    massage: String
+    message: String
 });
 
 app.set('views', './build/templates');
@@ -37,6 +37,6 @@ app.post('/saveMail', function(req, res){
 
 // run server
 
-app.listen(3000, function(){
-    console.log('listen 3000');
+app.listen(5000, function(){
+    console.log('listen 5000');
 });

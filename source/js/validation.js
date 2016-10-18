@@ -88,5 +88,18 @@ validation.init();
         return false;
       }
     }
+    if($('#mail').attr('id')==='mail'){
+      var xhr = new XMLHttpRequest();
+      xhr.open("POST","/saveMail");
+      var data = {
+        name: $form.find("[name='name']").val(),
+        mail: $form.find("[name='mail']").val(),
+        message: $form.find("[name='message']").val()
+      };
+      xhr.setRequestHeader('Content-type', 'application/json');
+      xhr.send(JSON.stringify(data));
+      //console.log(JSON.stringify(data));
+    }
+
   });
 })();
