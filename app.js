@@ -42,8 +42,8 @@ app.post('/saveMail', jsonParse, function(req, res){
   });
 });
 
-app.use(function(err,res,req){
-  res.status(err.status || 500);
+app.use(function(res,req){
+  res.status(404);
   res.send('<h1>NOT FOUND!!!</h1><h2>404</h2>')
 });
 
