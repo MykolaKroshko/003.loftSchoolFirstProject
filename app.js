@@ -19,6 +19,10 @@ app.set('view engine', 'pug');
 
 app.use(express.static('./build'));
 
+app.post('/autorization', jsonParse, function(req,res){
+  console.log('autorization attempt');
+});
+
 app.post('/saveMail', jsonParse, function(req, res){
   var mail = new Mail(req.body);
   mail.save(function(err){
@@ -46,5 +50,5 @@ app.use(function(err,res,req){
 // run server
 
 app.listen(3000, function(){
-    console.log('listen 5000');
+    console.log('listen 3000');
 });
