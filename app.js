@@ -19,28 +19,28 @@ app.set('view engine', 'pug');
 
 app.use(express.static('./build'));
 
-//app.get('/',function(req, res){
-//    res.send('Hello world!');
-//});
-
 app.post('/saveMail', jsonParse, function(req, res){
-//    console.log(req.body);
-    var mail = new Mail(req.body);
-    mail.save(function(err){
-	if (err){
-	    var message = {status:"error", error:err}
-	    res.send(JSON.stringify(message));
-	}else{
-	    var items = [];
-	    Mail.find({}, function(err, item){
-		item.forEach(function(i){
-		    items.push(i);
-		});
-		var message = {status:'sent',DBcontent:items};
-		res.send(JSON.stringify(message));
-	    });
-	};
-    });
+  var mail = new Mail(req.body);
+  mail.save(function(err){
+    if (err){
+      var message = {status:"error", error:err}
+      res.send(JSON.stringify(message));
+    }else{
+      var items = [];
+      Mail.find({}, function(err, item){
+        item.forEach(function(i){
+          items.push(i);
+        });
+        var message = {status:'sent',DBcontent:items};
+        res.send(JSON.stringify(message));
+      });
+    };
+  });
+});
+
+app.use(function(err,res,req){
+  res.status(err.status || 500);
+  res.send('<h1>NOT FOUND!!!</h1><h2>404</h2>')
 });
 
 // run server
