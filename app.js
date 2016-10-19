@@ -12,6 +12,24 @@ var Mail = mongo.model('Mail',{
     message: String
 });
 
+var User = mongo.model('User',{
+    name: String,
+    password: String,
+});
+
+var admin = new User({name:"admin",password:"root"});
+admin.save(function(err){
+  if (err){
+    console.log(err);
+  }else{
+    console.log("user added");
+  }
+  User.find({}, function(err, item){
+    console.log(item);
+  });
+
+});
+
 app.set('views', './build/templates');
 app.set('view engine', 'pug');
 
@@ -20,7 +38,8 @@ app.set('view engine', 'pug');
 app.use(express.static('./build'));
 
 app.post('/autorization', jsonParse, function(req,res){
-  console.log('autorization attempt');
+  console.log('autorization attempt'+req.body);
+
 });
 
 app.post('/saveMail', jsonParse, function(req, res){

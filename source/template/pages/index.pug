@@ -25,15 +25,15 @@ include ../common/_head
       .mainContainer__block.back.form_contains
         .mainContainer__block_info
           h4.mainContainer__block_info_formTitle Авторизуйтеся
-          form.mainContainer__block_info_form(action="#")
+          form.mainContainer__block_info_form#autorization(action="/autorization")
             .mainContainer__block_info_form_formItem
               label.mainContainer__block_info_form_loginLabel
-                input.mainContainer__block_info_form_textInput(type="text" placeholder="Логін")
+                input.mainContainer__block_info_form_textInput(type="text" name="name" placeholder="Логін")
                 span.mainContainer__block_info_form_image.mainContainer__block_info_form_login
                   include ../../icons/login.svg
             .mainContainer__block_info_form_formItem
               label.mainContainer__block_info_form_image_passwordLabel
-                input.mainContainer__block_info_form_textInput(type="password" placeholder="Пароль")
+                input.mainContainer__block_info_form_textInput(type="password" name="password" placeholder="Пароль")
                 span.mainContainer__block_info_form_image.mainContainer__block_info_form_image_password
                   include ../../icons/password.svg
             .mainContainer__block_info_form_formItem_last

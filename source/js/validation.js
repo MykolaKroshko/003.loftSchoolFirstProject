@@ -88,7 +88,7 @@ validation.init();
         return false;
       }
     }
-    if($('#mail').attr('id')==='mail'){
+    if($form.attr('id')==='mail'){
       var xhr = new XMLHttpRequest();
       xhr.open("POST","/saveMail");
       var data = {
@@ -108,6 +108,27 @@ validation.init();
           };
         }else if(response.status==='error'){
           alert('Під час відправлення сталася помілка: '+response.error);
+        }else{
+          alert('UNKNOWN ERROR!!!');
+        }
+      }
+    }else if ($form.attr('id')==='autorization') {
+      var xhr = new XMLHttpRequest();
+      xhr.open("POST","/autorization");
+      var data = {
+        name: $form.find("[name='name']").val(),
+        password: $form.find("[name='password']").val(),
+      };
+      $form[0].reset();
+      xhr.setRequestHeader('Content-type', 'application/json');
+      xhr.send(JSON.stringify(data));
+      xhr.onload = function(){
+        var response = JSON.parse(xhr.responseText);
+        console.log(response);
+        if(response.status==='ok'){
+          alert('Авторизація успішна');
+        }else if(response.status==='wrong'){
+          $('.indexPopUp').css('display','block');
         }else{
           alert('UNKNOWN ERROR!!!');
         }
