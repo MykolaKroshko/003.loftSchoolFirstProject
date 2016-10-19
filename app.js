@@ -17,18 +17,17 @@ var User = mongo.model('User',{
     password: String,
 });
 
-var admin = new User({name:"admin",password:"root"});
-admin.save(function(err){
-  if (err){
-    console.log(err);
-  }else{
-    console.log("user added");
-  }
-  User.find({}, function(err, item){
-    console.log(item);
-  });
-
-});
+//var admin = new User({name:"admin",password:"root"});
+//admin.save(function(err){
+//  if (err){
+//    console.log(err);
+//  }else{
+//    console.log("user added");
+//  }
+//  User.find({}, function(err, item){
+//    console.log(item);
+//  });
+//});
 
 app.set('views', './build/templates');
 app.set('view engine', 'pug');
@@ -38,15 +37,22 @@ app.set('view engine', 'pug');
 app.use(express.static('./build'));
 
 app.post('/autorization', jsonParse, function(req,res){
-  console.log('autorization attempt'+req.body);
-
+  User.find({name:req.body.name, password:req.body.password},function(err, item){
+    if(item.length>0){
+      var message = {status:'ok'};
+    }
+    else{
+      var message = {status:'wrong'};
+    };
+    res.send(JSON.stringify(message));
+  });
 });
 
 app.post('/saveMail', jsonParse, function(req, res){
   var mail = new Mail(req.body);
   mail.save(function(err){
     if (err){
-      var message = {status:"error", error:err}
+      var message = {status:"error", error:err};
       res.send(JSON.stringify(message));
     }else{
       var items = [];
