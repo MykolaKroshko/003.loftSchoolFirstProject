@@ -42,7 +42,7 @@ var validation = (function(){
     el.qtip({
       content : {
         text : function(){
-          return "ÐŸÐ¾Ð»Ðµ Ð¼Ð°Ñ” Ð±ÑƒÑ‚Ð¸ Ð·Ð°Ð¿Ð¾Ð²Ð½ÐµÐ½Ðµ";
+          return "Поле обов'язкове для заповнення!!!";
         }
       },
       show: {
