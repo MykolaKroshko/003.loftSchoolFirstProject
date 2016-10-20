@@ -17,6 +17,7 @@
     if(e.target.className.indexOf("indexContainer") !== -1){
       if($(".mainContainer.hover").length){
         reverseFlip();
+        $('.mainContainer__block_info_form')[0].reset();
       }
     }
   });

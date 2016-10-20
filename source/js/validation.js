@@ -78,12 +78,14 @@ validation.init();
     }
     if ($form.find('input[type="checkbox"]').length){
       if (!$form.find('input[type="checkbox"]:checked').length){
+        $('.popUpText').text('Роботам тут не місце');
         $('.indexPopUp').css('display','block');
         return false;
       }
     }
     if ($form.find('input[type="radio"]').length){
       if (!($form.find('input[type="radio"]:checked').val() === "yes")){
+        $('.popUpText').text('Вам необхідно бути впевненим');
         $('.indexPopUp').css('display','block');
         return false;
       }
@@ -128,6 +130,7 @@ validation.init();
         if(response.status==='ok'){
           alert('Авторизація успішна');
         }else if(response.status==='wrong'){
+          $('.popUpText').text('Логін та/або пароль не вірний');
           $('.indexPopUp').css('display','block');
         }else{
           alert('UNKNOWN ERROR!!!');

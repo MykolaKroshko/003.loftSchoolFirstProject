@@ -20,26 +20,34 @@
   height: $indexTextInputsSize;
   padding: $smallIndent/2 $smallIndent;
   padding-left: $indexTextInputsSize + $smallIndent;
-  border: none;
+  border: 1px solid transparent;
   color: $indexInputsTextColor;
   outline: none;
   &::placeholder{
     color: rgba($indexInputsTextColor, .5);
   }
   &:hover{
-    border: 1px solid $indexInputsTextColor;
+    border-color: $indexInputsTextColor;
   }
   &:focus{
-    border: 1px solid $blue;
+    border-color: $blue;
   }
+  &.has-error{
+    border-color: $tooltipColor;
+  };
 }
 &_textInput:hover + &_image{
-  border-right: 1px solid rgba($indexInputsTextColor, .75);
+  border-right-color: rgba($indexInputsTextColor, .75);
 }
 &_textInput:focus + &_image{
-  border-right: 1px solid $blue;
+  border-right-color: $blue;
   & path{
     fill: $blue;
   }
 }
-
+&_textInput.has-error + &_image{
+  border-right-color: $tooltipColor;
+  & path{
+    fill: $tooltipColor;
+  }
+}
