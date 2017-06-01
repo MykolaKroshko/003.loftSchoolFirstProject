@@ -34,7 +34,7 @@ app.set('view engine', 'pug');
 
 // routes
 
-app.use(express.static('./build'));
+app.use(express.static('/home/xamjo/portfolio/build'));
 
 app.post('/autorization', jsonParse, function(req,res){
   User.find({name:req.body.name, password:req.body.password},function(err, item){
